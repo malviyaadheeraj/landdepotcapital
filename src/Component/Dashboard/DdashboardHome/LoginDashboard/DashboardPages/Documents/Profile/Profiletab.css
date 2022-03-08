@@ -1,0 +1,219 @@
+.Profile-wraper {
+  padding: 45px 15px 25px;
+}
+
+.Profile-tabwraper {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.persnol-info-input::-webkit-outer-spin-button,
+.persnol-info-input::-webkit-inner-spin-button,
+.persnol-info-input::-webkit-outer-spin-button,
+.persnol-info-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Profilet-tabwrap {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.Profilet-tabwrap .profile-item {
+  padding: 11px 18px;
+  margin: 10px 33px 10px 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Profilet-tabwrap .profile-item:hover {
+  background-color: #ec111a;
+  color: #fff;
+}
+
+.form-currentline {
+  line-height: 26px;
+  font-size: 20px;
+  margin-bottom: 13px;
+  font-weight: 600;
+}
+
+.profile-item-active {
+  background-color: #ec111a;
+  color: #fff;
+}
+
+/* Form profile */
+
+.profileform-wraper {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 6px 14px 26px;
+  margin-top: 26px;
+}
+
+.profileinpt-wrap {
+  width: 100%;
+}
+
+.inpt-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.inptWrapperSmall {
+  position: absolute;
+  top: 49px;
+  font-size: 12px;
+  color: red;
+  right: 60px;
+  font-weight: 600;
+}
+
+.persnol-info-input {
+  width: 31%;
+  padding: 11px 17px;
+  outline: none;
+  height: 50px;
+  margin-right: 19px;
+  border: none;
+  background-color: #f2f2f0;
+}
+
+.postalinpt-wrap {
+  width: 97.5%;
+  padding: 11px 17px;
+  outline: none;
+  height: 50px;
+  border: none;
+  margin: 16px 0;
+  background-color: #f2f2f0;
+}
+
+.save-btn {
+  padding: 10px 47px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-right: 20px;
+  background-color: #0075be;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+
+/* investpage */
+
+.review-pagewrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 26px;
+  /* margin: 50px 20px; */
+  padding: 20px;
+}
+
+.info-edit-wrapp {
+  width: 100%;
+  height: 80px;
+  background-color: #f2f2f0;
+  padding: 26px 30px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.documentSmFile {
+  width: 50%;
+}
+
+.proinfo-line {
+  margin-bottom: 0;
+  width: 50%;
+  float: left;
+  font-weight: 600;
+  color: #3c4c64;
+  font-size: 18px;
+}
+
+.proinfo-line i {
+  color: #008f1f;
+}
+
+.edit-btn-wrap {
+  float: right;
+}
+
+.editbtn {
+  background-color: #0075be;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 8px 11px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.editbtn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+@media (max-width: 1200px) {
+  .Profilet-tabwrap {
+    flex-direction: column;
+  }
+  .Profilet-tabwrap .profile-item {
+    margin: 0px;
+  }
+  .review-pagewrapper {
+    width: 100%;
+    padding: 10px;
+  }
+  .info-edit-wrapp {
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .persnol-info-input {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .persnol-info-input {
+    margin-right: 6px;
+  }
+  .documentSmFile {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profileform-wraper {
+    padding: 16px 13px 15px 13px;
+  }
+  .documentSmFile {
+    width: 100%;
+  }
+  .persnol-info-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

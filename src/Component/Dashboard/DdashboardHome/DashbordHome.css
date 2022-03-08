@@ -1,0 +1,76 @@
+.dashboardbg {
+  background-color: #f2f2f0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 150px 0;
+}
+
+.homeWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px;
+}
+
+.homeWrapper h1 {
+  color: #1d1d1d;
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: bolder;
+}
+
+.homeWrapper p {
+  width: 61%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.complete-btn {
+  padding: 11px 41px;
+  background-color: #0075be;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+.complete-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 990px) {
+  .homeWrapper {
+    padding: 50px;
+  }
+
+  .homeWrapper p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .homeWrapper {
+    padding: 30px;
+  }
+
+  .homeWrapper h1 {
+    font-size: 34px;
+  }
+
+  .homeWrapper p {
+    width: 100%;
+  }
+
+  .dashboardbg {
+    padding: 40px 10px 40px 10px;
+  }
+}

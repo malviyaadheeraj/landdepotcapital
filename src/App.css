@@ -1,0 +1,20 @@
+.App {
+  /* text-align: center; */
+  font-family: "Raleway", sans-serif;
+  color: #2e3659;
+  /* color: #4a4f65; */
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

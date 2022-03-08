@@ -1,0 +1,88 @@
+.Objectibe-wrapper {
+  padding: 16px;
+  background-color: #fff;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.Objectibe-wrapper p {
+  color: #000;
+  margin-bottom: auto;
+  font-size: 15px;
+}
+.objectiveTab {
+  list-style: none;
+  padding: 0;
+}
+
+.select-input-wrap {
+  width: 100%;
+  padding: 11px 17px;
+  outline: none;
+  height: 50px;
+  margin: 16px 0;
+  border-radius: 5px;
+  border: 1px solid #666;
+  margin-top: 5px;
+}
+
+.select-input-wrap::-webkit-outer-spin-button,
+.select-input-wrap::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.object-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+  /* line-height: 1.11rem; */
+}
+
+/* document*/
+
+.document-wrapper {
+  background-color: #fff;
+  padding: 16px;
+  margin-top: 26px;
+  border-radius: 10px;
+}
+
+.docsubmit-btn {
+  background-color: #0075be;
+  color: #fff;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  border-radius: 05px;
+  font-weight: 500;
+}
+
+.docsubmit-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+
+/* Insider-wrapper */
+
+.Insider-wrapper {
+  background-color: #fff;
+  padding: 16px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.Insider-wrapper p {
+  color: #000;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+Result Skip Results Iframe EDIT ON .body-flie,
+.body-flie:before,
+.body-flie:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

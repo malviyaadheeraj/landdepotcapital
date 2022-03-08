@@ -1,0 +1,88 @@
+.footer-wrapper {
+  padding: 40px 0 0 13px;
+}
+
+.footer-wrapper p {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #2e3659;
+}
+
+.footer-wrapper ul {
+  list-style: none;
+  padding: 0 0 0 00px;
+}
+
+.footer-wrapper ul li {
+  line-height: 35px;
+}
+
+.footer-wrapper ul li i {
+  color: #0075be;
+}
+.footer-wrapper ul li .fa-phone-alt {
+  transform: rotate(90deg);
+}
+
+.footer-detailsLink {
+  text-decoration: none;
+  color: #000;
+}
+.footer-detailsLink:hover {
+  color: #000;
+}
+
+.linkcolor {
+  text-decoration: none;
+  color: #000;
+}
+
+.linkcolor:hover {
+  color: inherit;
+  transition: 0.4s;
+}
+
+.StreetAdrs {
+  width: 93%;
+  float: left;
+}
+
+.StreetAdrs label {
+  line-height: 26px;
+}
+
+.StreetAdd-wrap {
+  width: 100%;
+  background-color: lightseagreen;
+}
+
+.StreetAdd-wrap-icon {
+  width: 7%;
+  float: left;
+  color: #0075be;
+}
+
+.copyright-bg {
+  background-color: #f4f4f4;
+  margin-top: 30px;
+}
+.social-wrapper_links ul {
+  display: flex;
+  padding-left: 23px;
+}
+.social-wrapper_links ul li {
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 560px) {
+  .footer-wrapper {
+    padding: 20px 0 0 13px;
+  }
+
+  .footer-wrapper p {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+}

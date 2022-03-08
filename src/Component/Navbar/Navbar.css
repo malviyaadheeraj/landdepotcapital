@@ -1,0 +1,134 @@
+.navbar-wrapper {
+  width: 100%;
+  position: sticky;
+  height: 85px;
+  top: 0px;
+  background-color: #fff;
+  z-index: 100;
+  padding-bottom: 5px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbarItems {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.navbarItem {
+  margin-right: 30px;
+}
+.navbarItem .navitemsButton {
+  padding: 3px 20px;
+  background-color: #ec111a;
+  border: none;
+  margin-top: -10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 31px;
+  transition: all 0.3s;
+}
+.navbarItem .navitemsButton:hover {
+  background-color: #0075be;
+  transition: all 0.3s;
+}
+
+.navitems-size {
+  text-decoration: none;
+  position: relative;
+  text-transform: capitalize;
+  padding: 5px 0;
+  color: #2e3659;
+  font-size: 17px;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.navitems-size:focus {
+  color: #ec111a !important;
+  border-bottom: #ec111a solid 2px;
+}
+.navitems-size:hover {
+  color: #ec111a !important;
+  border-bottom: #ec111a solid 2px;
+}
+
+.dashbord-icon {
+  width: 14px;
+  margin-right: 7px;
+}
+
+.login-btn {
+  margin-left: 20px;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #80868b !important;
+  text-decoration: none;
+}
+
+.dropdownIcons #btn {
+  color: #000;
+  font-size: 30px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+  margin-top: -10px;
+}
+.dropdownIcons #cancel {
+  font-size: 30px;
+  line-height: 80px;
+  cursor: pointer;
+  color: #000;
+  display: none;
+}
+.dropdownNavbar {
+  margin-top: -20px;
+  background-color: white;
+  height: 450px;
+  display: none;
+  overflow-y: scroll;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.dropdownNavbarItems {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dropdownNavbarItem {
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 5px 0;
+  color: #2e3659;
+  font-size: 17px;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbarItems {
+    display: none;
+  }
+  .dropdownNavbar {
+    display: block;
+  }
+  .dropdownIcons #btn {
+    display: unset;
+  }
+  .dropdownIcons #cancel {
+    display: unset;
+  }
+
+  .login-btn {
+    margin-left: 0px;
+  }
+}

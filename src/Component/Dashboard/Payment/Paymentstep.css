@@ -1,0 +1,358 @@
+/* Paytments page */
+.payment-step-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stepsTitle {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 51px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.paymentTab {
+  list-style: none;
+  padding: 10px;
+  display: block;
+}
+
+.paymentTab li {
+  float: left;
+  padding: 5px 15px 5px 06px;
+}
+
+.payintertab {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.payintertab-active {
+  color: #ec111a;
+}
+
+.paywiretab {
+  color: #bababa;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.paybody-text {
+  color: #bababa;
+  text-align: start;
+  padding-left: 16px;
+}
+
+/* .paymentDetailsWrapper {} */
+
+.paydetails-wrap {
+  list-style: none;
+  padding-left: 1px;
+}
+
+.paymentDetailsWrapper li {
+  width: 95%;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.paybtn-wrapper {
+  padding: 16px;
+}
+
+.backbtn-wrap {
+  padding: 14px 30px;
+  background-color: #0075be;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.confirm-btn {
+  padding: 14px 30px;
+  border: none;
+  background-color: #0075be;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.backbtn-wrap:hover {
+  background-color: #ec111a;
+}
+
+.confirm-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* Payments step */
+.propertyimg-wrap {
+  width: 100%;
+  height: 259px;
+}
+
+.propert-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.payment-imgsection {
+  margin-right: 50px;
+}
+
+.paymentbody-wrapeer {
+  padding-left: 5px;
+}
+
+.payment-stepbgwrap {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.proprtyname {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.proprtydetails {
+  color: #838592;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.proprtytxt {
+  color: #372c2c;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.backpaybtn-wrapper {
+  padding: 16px 5px;
+}
+
+.Backprperty-btn {
+  padding: 10px 25px;
+  background-color: #0075be;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.Backprperty-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+.next-btn {
+  padding: 10px 40px;
+  background-color: #0075be;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  margin-left: 22px;
+}
+
+.next-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+.great-line {
+  color: #398617;
+  line-height: 51px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.form-wrapper {
+  width: 75%;
+  position: relative;
+}
+
+.invastmentWrapper {
+  margin-left: 20px;
+}
+
+.invest-input {
+  width: 98%;
+  height: 60px;
+  background-color: #f2f2f0;
+  border: 1px solid #e7e7e7;
+  padding: 8px 18px;
+  outline: none;
+  font-weight: 600;
+}
+
+.form-wrapper .investAmountDolor {
+  position: absolute;
+  top: 19px;
+  left: 5px;
+}
+
+.invest-input::-webkit-outer-spin-button,
+.invest-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.PriceWrapper {
+  width: 100%;
+  height: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.purchase-box {
+  text-align: center;
+  background-color: #f2f2f0;
+  width: 32%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #e7e7e7;
+  float: left;
+  margin-right: 10px;
+}
+
+.purchase-wrap {
+  margin-bottom: 2px;
+  color: #2e3656;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Price-amount {
+  color: #0075be;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.apply-input {
+  width: 98%;
+  height: 60px;
+  background-color: #f2f2f0;
+  border: 1px solid #e7e7e7;
+  padding: 8px 160px 8px 12px;
+  outline: none;
+  font-weight: 600;
+  border-radius: 10px;
+  position: relative;
+}
+
+.apply-btn {
+  position: absolute;
+  left: auto;
+  right: 15px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ec111a;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  top: 4px;
+  bottom: auto;
+}
+
+.apply-btn:hover {
+  background-color: #0075be;
+  transition: 0.4s;
+}
+.Promo-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.check-wrapper {
+  color: #645b5b;
+  font-size: 14.18px;
+}
+
+@media (max-width: 1200px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .great-line {
+    margin-top: 10px;
+    line-height: 29px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .stepsTitle {
+    font-size: 16px;
+  }
+
+  .payment-step-wrapper {
+    padding: 13px;
+  }
+
+  .paymentTab {
+    padding-top: 0px;
+  }
+
+  .paymentTab li {
+    padding: 0px 8px;
+  }
+
+  .paybody-text {
+    font-size: 10px;
+  }
+
+  .paymentDetailsWrapper li {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .confirm-btn {
+    margin: 10px 02px;
+  }
+  .invastmentWrapper {
+    margin-left: 10px;
+    margin-right: 7px;
+  }
+  .invest-input {
+    width: 100%;
+    height: 66px;
+  }
+  .apply-input {
+    width: 100%;
+    padding: 10px 87px 8px 12px;
+  }
+  .apply-btn {
+    top: 7px;
+    padding: 14px 12px;
+    font-size: 14px;
+    right: 8px;
+  }
+}

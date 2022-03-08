@@ -1,0 +1,59 @@
+.login-sidebar-wrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+.sidebar-list-wrap {
+  list-style: none;
+  padding: 0px;
+  padding-top: 30px;
+}
+
+.sidebar-item {
+  width: 100%;
+  font-size: 16px;
+  color: #250101;
+  height: 50px;
+  margin: 13px 0 0 0;
+  padding: 11px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border-right: 5px solid #fff;
+}
+
+.sidebar-item-active {
+  color: #ec111a;
+  background-color: #ffeaeb;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 3px solid;
+}
+
+.sidebar-item:hover {
+  color: #ec111a;
+  background-color: #ffeaeb;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 3px solid;
+  transition: 0.4s;
+}
+
+.top-propertis-btn {
+  /* padding: 10px 30px; */
+  padding: 10px 21px;
+  border: none;
+  outline: none;
+  background-color: #0075be;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+
+.top-propertis-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}

@@ -1,0 +1,22 @@
+.OurCount_style {
+  background-color: #fff;
+  padding: 24px;
+}
+.OurCount_style h1 {
+  color: #2e3659;
+  font-weight: 900;
+}
+.OurCount_style p {
+  font-weight: 100;
+  color: #000;
+}
+@media screen and (max-width: 991px) {
+  .OurCount_style {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .OurCount_style {
+    margin-bottom: 1rem;
+  }
+}

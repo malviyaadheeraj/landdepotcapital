@@ -1,0 +1,125 @@
+.charts-wrappr {
+  background-color: #fff;
+  /* background-color: aqua; */
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+}
+
+.chart-bgwrap {
+  width: 100%;
+  background-color: #fff;
+}
+.chart {
+  margin: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.financial-botam-wrap {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.annual-rol-wrapper {
+  width: 55%;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 30px 12px rgba(218, 214, 214, 0.6);
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.annual-rol-wrapper h4 {
+  font-weight: 700;
+}
+
+.annual-rol-wrapper h6 {
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.annual-rol-wrapper .annualInputRange {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.annual-rol-wrapper .annualInputRange::-webkit-progress-bar {
+  background-color: violet;
+}
+
+.annualRolNumber {
+  width: 100%;
+  display: flex;
+}
+.annualRolNumber input {
+  width: 80%;
+  padding: 12px 10px;
+  color: #000;
+  font-weight: 600;
+}
+
+.annualRolNumber select {
+  width: 80%;
+  padding: 14px 10px;
+  font-weight: 600;
+}
+
+.annualRolNumber select:focus {
+  outline: 0;
+}
+
+.annualRollBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.buttonAnnual {
+  padding: 8px 25px;
+  background-color: #0075be;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+@media (max-width: 992px) {
+  .annual-rol-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .annual-rol-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  .annual-rol-wrapper {
+    width: 100%;
+  }
+  .annualRolNumber {
+    flex-direction: column;
+  }
+
+  .annualRolNumber input {
+    width: 70%;
+  }
+
+  .annualRolNumber select {
+    width: 70%;
+  }
+
+  .annualRollBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .financial-botam-wrap {
+    display: unset;
+  }
+}

@@ -1,0 +1,342 @@
+.Welcomebg {
+  background-image: url("/src/assets/img/Welcome-bg.jpg");
+  background-size: cover;
+  padding: 100px 20px 100px 15px;
+  margin: 50px 0 50px;
+  text-align: center;
+}
+
+.forms-container {
+  padding: 29px;
+}
+.welcomewrap {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.laptop-img {
+  width: 90%;
+}
+
+.form-hading {
+  font-size: 40px;
+  line-height: 72.18px;
+  font-weight: bolder;
+}
+
+.form-subhading {
+  font-size: 18px;
+}
+
+.welcomeline {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.form-bg {
+  background-image: url("/src/assets/img/form-bg.jpg");
+  background-size: cover;
+  /* padding: 100px 20px 200px 15px; */
+  padding: 50px;
+  margin: 50px 0 50px;
+}
+
+.singupform-wrap {
+  width: 100%;
+}
+
+.firstname-input {
+  height: 50px;
+  width: 48%;
+  border: 1px solid #e6eef3;
+  padding: 8px 16px;
+  /* box-shadow: 0 3px 9px rgb(0 0 0 / 25%); */
+  border-radius: 8px;
+}
+
+.pwd-input {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #e6eef3;
+  padding: 8px 16px;
+}
+
+.signup-error {
+  color: red;
+  /* padding: 10px; */
+  font-size: 14px;
+}
+
+.singup-btn {
+  padding: 10px 20px;
+  background-color: #0075be;
+  width: 100%;
+  outline: none;
+  height: 50px;
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.singup-btn:hover {
+  background-color: #0075bea3;
+  transition: 0.4s;
+}
+
+.change-form {
+  color: #7c7c7c;
+  margin-top: 30px;
+}
+
+.login-txt {
+  text-decoration: none;
+  color: #0075be;
+  font-weight: 600;
+}
+
+.login-txt:hover {
+  color: #0075be;
+  transition: 0.4s;
+}
+
+.orlinewrap {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  color: #000;
+  margin-top: 30px;
+}
+
+.orlinewrap:before,
+.orlinewrap:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #b9c6d0;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.social-btn-wrap {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.google-btn {
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 48%;
+  margin-top: 10px;
+  border-radius: 7px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.remamber-wrap {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.forgetpwd-wrap {
+  float: right;
+  color: #7c7c7c;
+  text-decoration: none;
+}
+
+.remambertxt {
+  float: left;
+  color: #000;
+}
+
+.forgetpwd-wrap:hover {
+  color: #7c7c7c;
+  transition: 0.4s;
+}
+
+.formsbg {
+  background-color: #f4f4f4;
+}
+.google-img {
+  width: 19px;
+  height: 19px;
+  margin: -2px 10px 1px 0px;
+}
+
+/* Forget form */
+.Forgetform-bg {
+  background-image: url("/src/assets/img/form-bg.jpg");
+  background-size: cover;
+  padding: 207px 50px 0px 50px;
+
+  margin: 50px 0 50px;
+}
+
+.forget-submit-btn {
+  padding: 10px 20px;
+  background-color: #0075be;
+  width: 100%;
+  outline: none;
+  height: 60px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 10px;
+
+  /* margin: 15px 108px 15px 108px; */
+  font-size: 18px;
+}
+
+.forget-submit-btn:hover {
+  background-color: #0075bea3;
+  transition: 0.4s;
+}
+
+.forgetform-hading {
+  font-size: 47px;
+  line-height: 72.18px;
+  font-weight: bolder;
+}
+.resetform-hading {
+  font-size: 47px;
+  line-height: 72.18px;
+  font-weight: bolder;
+}
+
+.forgot-subhading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.singup-btn:hover {
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  background-color: #2098d1;
+  color: white;
+  transition: 0.4s;
+}
+@media (max-width: 1400px) {
+  .google-btn {
+    width: 46%;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .form-bg {
+    padding: 30px;
+  }
+  .Forgetform-bg {
+    padding: 115px 50px 0 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-bg {
+    padding: 13px;
+  }
+  .google-btn {
+    width: 46%;
+    font-size: 12px;
+    padding: 8px 2px;
+  }
+  .orlinewrap {
+    margin-top: 25px;
+  }
+  .social-btn-wrap {
+    margin-top: 10px;
+  }
+
+  .Forgetform-bg {
+    padding: 153px 23px 0px 23px;
+  }
+  .Forgetform-bg .form-hading {
+    font-size: 26px;
+    line-height: 50px;
+  }
+  .resetform-hading {
+    font-size: 28px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Welcomebg {
+    padding: 40px 20px 40px 15px;
+  }
+
+  .forms-container {
+    padding: 0px;
+  }
+  .forget-submit-btn {
+    margin: 60px 0;
+  }
+  .form-bg {
+    padding: 20px;
+    margin: 0 0 50px;
+  }
+  .social-btn-wrap {
+    margin-top: 20px;
+  }
+  .Forgetform-bg {
+    margin: 0 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Welcomebg {
+    margin: 0;
+  }
+  .form-bg {
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .google-btn {
+    width: 100%;
+  }
+  .form-hading,
+  .resetform-hading {
+    font-size: 16px;
+    line-height: 36px;
+  }
+  .forgetpwd-wrap {
+    margin-left: 10px;
+  }
+  .social-btn-wrap {
+    margin-top: 29px;
+  }
+  .welcomeline {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /* Forgetform */
+
+  .Forgetform-bg {
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .welcomewrap {
+    font-size: 38px;
+  }
+  .form-hading {
+    font-size: 26px;
+  }
+  .forgot-subhading {
+    margin-top: 10px;
+  }
+  .forms-container {
+    padding: 0 12px;
+  }
+}

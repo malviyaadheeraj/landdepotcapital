@@ -1,0 +1,30 @@
+.LoginDashbord-wrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sidebarwrap {
+  width: 18%;
+  float: left;
+  display: block;
+}
+
+.Right-sideWrapper {
+  width: 82%;
+  float: left;
+  display: block;
+  padding: 30px;
+  height: 100%;
+  background-color: #f2f2f0;
+}
+
+@media (max-width: 1200px) {
+  .sidebarwrap {
+    display: none;
+  }
+  .Right-sideWrapper {
+    width: 100%;
+    padding: 10px;
+  }
+}

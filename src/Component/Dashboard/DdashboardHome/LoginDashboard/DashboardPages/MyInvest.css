@@ -1,0 +1,140 @@
+.invastment-tabwraper {
+  width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  flex-direction: row;
+}
+
+.invastment-tabwrap {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.invastment-tabwrap li {
+  float: left;
+  padding: 16px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.tabs-details {
+  width: 70%;
+  float: right;
+}
+
+.invastment-tabwrap li b {
+  color: #384c66;
+  font-size: 24px;
+}
+
+.invastment-tabwrap li label {
+  color: #79818c;
+  font-size: 14px;
+}
+
+.property-detailswrap {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.tabswraping {
+  margin-right: 20px;
+}
+
+.tablehading-wrapper {
+  border-bottom: 2px solid #79818c;
+}
+
+table,
+th,
+tr,
+td {
+  border: none;
+  text-align: center;
+}
+
+.data-scrolls {
+  width: 100%;
+}
+
+.tabelheadsline {
+  padding: 20px 15px !important;
+  margin-left: -20px;
+}
+
+.bye-btn {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 6px 13px;
+  background-color: #0075be;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.bye-btn:hover {
+  background-color: #ec111a;
+  transition: 0.4s;
+}
+
+.tablebody {
+  padding: 22px 10px !important;
+}
+
+.tablebody p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tabledata {
+  padding: 50px 10px !important;
+}
+
+.tabledata b {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.viewlink {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.viewlink:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .tabs-details {
+    width: 62%;
+  }
+  .property-detailswrap {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 992px) {
+  .invastment-tabwrap li {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .invastment-tabwrap li {
+    width: 100%;
+  }
+  .tabswraping {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
