@@ -122,8 +122,6 @@ const PropertyPage = ({ match }) => {
                           )}
                       </p>
 
-                      {/* <button className="pre-btn mb-4">Pre-Construction</button> */}
-
                       <div className="PriceWrapper">
                         <div className="purchase-box">
                           <p className="purchase-wraps">Purchase Price</p>
@@ -156,8 +154,8 @@ const PropertyPage = ({ match }) => {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="my-5 investbook-btns"> */}
-                    {/* {loginHidden === "true" ? (
+                    <div className="my-5 investbook-btns">
+                      {loginHidden === "true" ? (
                         <Link
                           to="/login-dashboard/my-profile"
                           onClick={() =>
@@ -183,31 +181,10 @@ const PropertyPage = ({ match }) => {
                         <Link to="/login">
                           <button className="boook-btn">Invest Now</button>
                         </Link>
-                      )} */}
-                    {/* <button className="boook-btn">Invest Now</button>
+                      )}
                       <button className="boook-btn ">
                         <i className="far fa-calendar-alt me-2"></i> Book a
                         Meeting
-                      </button>
-                    </div> */}
-                    <div className="my-5 investbook-btns">
-                      <Link to="/invest-property">
-                        <button className="boook-btn">Invest Now</button>
-                      </Link>
-
-                      <button className="boook-btn">
-                        <a
-                          href={
-                            getPropertiesId &&
-                            getPropertiesId.media &&
-                            getPropertiesId.media.media
-                          }
-                          download
-                          rel="noreferrer"
-                        >
-                          <i className="far fa-calendar-alt me-2"></i> Download
-                          Brochure
-                        </a>
                       </button>
                     </div>
                     <p className="capital-risk">

@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import DropdownNavbar from "./DropdownNavbar";
-import InvestPopup from "../popups/InvestPopup/InvestPopup";
 
 const Navbar = () => {
   const [show, setShow] = useState();
-  const [formOpenModal, setFormOpenModal] = useState(false);
-
-  const onCloseInvestModal = () => setFormOpenModal(false);
-  const onOpenInvestModal = () => setFormOpenModal(true);
+  const loginHidden = localStorage.getItem("landdepot-login");
 
   return (
     <div className="navbar-wrapper">
@@ -45,16 +41,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="navbarItem">
-              <Link className="navitems-size" to="/previous-deals">
-                Previous Deals
-              </Link>
-            </li>
-            {/* <li className="navbarItem">
-              <Link className="navitems-size" to="/invest-property">
-                Invest Property
-              </Link>
-            </li> */}
-            <li className="navbarItem">
               <Link className="navitems-size" to="/about">
                 About
               </Link>
@@ -69,13 +55,8 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </li>
-            <li className="navbarItem">
-              <button className="navitemsButton" onClick={onOpenInvestModal}>
-                INVEST NOW
-              </button>
-            </li>
 
-            {/* {loginHidden === "true" ? (
+            {loginHidden === "true" ? (
               <li className="navbarItem">
                 <Link
                   className="navitems-size"
@@ -95,16 +76,11 @@ const Navbar = () => {
                   <i className="fa-solid fa-user me-2"></i>Login
                 </Link>
               </li>
-            )} */}
+            )}
           </ul>
         </div>
       </div>
       {show && <DropdownNavbar setShow={setShow} />}
-
-      <InvestPopup
-        formOpenModal={formOpenModal}
-        onCloseModal={onCloseInvestModal}
-      />
     </div>
   );
 };

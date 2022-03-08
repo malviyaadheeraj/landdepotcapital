@@ -22,6 +22,18 @@ import Advisors from "./Component/Pages/Advisors";
 import EventDetails from "./Component/Pages/EventDetails";
 import InvestNowPopup from "./Component/popups/browcerPopup/InvestNowPopup";
 import OldProperty from "./Component/popups/oldProperty/OldProperty";
+import DashboardHome from "./Component/Dashboard/DdashboardHome/DashboardHome";
+import DashboardRegister from "./Component/Dashboard/DdashboardHome/DashboardRegister";
+import Paymentpage from "./Component/Dashboard/Payment/Paymentpage";
+import Paymentstep from "./Component/Dashboard/Payment/Paymentstep";
+import LoginForm from "./Component/Dashboard/Forms/LoginForm";
+import SingupForm from "./Component/Dashboard/Forms/SingupForm";
+import LoginDashboard from "./Component/Dashboard/DdashboardHome/LoginDashboard/LoginDashboard";
+import ForgetPassword from "./Component/Dashboard/Forms/ForgetPassword";
+import conformpassword from "./Component/Dashboard/Forms/Confirmpassword";
+import ProtectedRoute from "./ProtectedRoute";
+import PropertyDocument from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/PropertyDocument";
+import InvestDetails from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/InvestDetails";
 
 function App() {
   return (
@@ -52,6 +64,33 @@ function App() {
           <Route exact path="/terms" component={Terms} />
           <Route exact path="/privacy" component={Privacy} />
           <Route exact path="/keyDisclosure" component={KeyDisclosure} />
+          <ProtectedRoute
+            exact
+            path="/login-dashboard/:id"
+            component={LoginDashboard}
+          ></ProtectedRoute>
+          <Route exact path="/paymentpage/:id" component={Paymentpage}></Route>
+          <Route exact path="/dashboardHome" component={DashboardHome}></Route>
+          <Route exact path="/thank-you" component={DashboardRegister}></Route>
+          <Route exact path="/paymentstep" component={Paymentstep}></Route>
+          <Route exact path="/singupForm" component={SingupForm}></Route>
+          <Route
+            exact
+            path="/invest-details/:invest_id"
+            component={InvestDetails}
+          ></Route>
+          <Route exact path="/propertdoc" component={PropertyDocument}></Route>
+          <Route exact path="/forgetpassword" component={ForgetPassword} />
+          <Route
+            exact
+            path="/userresetpassword/:token"
+            component={conformpassword}
+          />
+          {localStorage.getItem("landdepot-login") ? (
+            <Route exact path="/login" component={Home}></Route>
+          ) : (
+            <Route exact path="/login" component={LoginForm}></Route>
+          )}
         </Switch>
       </div>
       <Footer />
@@ -62,32 +101,5 @@ function App() {
 export default App;
 
 {
-  /* <ProtectedRoute exact path="/login-dashboard/:id" component={LoginDashboard}></ProtectedRoute>
-<Route exact path="/paymentpage/:id" component={Paymentpage}></Route>
-<Route exact path="/dashboardHome" component={DashboardHome}></Route>
-<Route exact path="/thank-you" component={DashboardRegister}></Route>
-<Route exact path="/paymentstep" component={Paymentstep}></Route>
-<Route exact path="/singupForm" component={SingupForm}></Route>
-<Route exact path="/invest-details/:invest_id" component={Investdetails}></Route>
-<Route exact path="/propertdoc" component={PropertyDocument}></Route>
-<Route exact path="/forgetpassword" component={ForgetPassword} />
-<Route exact path="/userresetpassword/:token" component={conformpassword}/>
-{localStorage.getItem("landdepot-login") ? (
-  <Route exact path="/login" component={Home}></Route>
-) : (
-  <Route exact path="/login" component={LoginForm}></Route>
-)} */
+  /*  */
 }
-
-// import DashboardHome from "./Component/Dashboard/DdashboardHome/DashboardHome";
-// import DashboardRegister from "./Component/Dashboard/DdashboardHome/DashboardRegister";
-// import Paymentpage from "./Component/Dashboard/Payment/Paymentpage";
-// import Paymentstep from "./Component/Dashboard/Payment/Paymentstep";
-// import LoginForm from "./Component/Dashboard/Forms/LoginForm";
-// import SingupForm from "./Component/Dashboard/Forms/SingupForm";
-// import LoginDashboard from "./Component/Dashboard/DdashboardHome/LoginDashboard/LoginDashboard";
-// import ForgetPassword from "./Component/Dashboard/Forms/ForgetPassword";
-// import conformpassword from "./Component/Dashboard/Forms/Confirmpassword";
-// import ProtectedRoute from "./ProtectedRoute";
-// import PropertyDocument from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/PropertyDocument";
-// import Investdetails from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/InvestDetails";

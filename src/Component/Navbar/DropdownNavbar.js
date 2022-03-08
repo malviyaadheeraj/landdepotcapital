@@ -7,24 +7,16 @@ import InvestPopup from "../popups/InvestPopup/InvestPopup";
 const DropdownNavbar = ({ setShow }) => {
   const history = useHistory();
   const dispatch = useDispatch();
-  const [formOpenModal, setFormOpenModal] = useState(false);
-
-  const onCloseInvestModal = () => setFormOpenModal(false);
-  const onOpenInvestModal = () => setFormOpenModal(true);
+  const loginHidden = localStorage.getItem("landdepot-login");
 
   const handleLogout = () => {
     dispatch(onLogoutUser(history));
     localStorage.clear();
     window.location.reload();
   };
-  const loginHidden = localStorage.getItem("landdepot-login");
 
   return (
     <div className="dropdownNavbar">
-      <InvestPopup
-        formOpenModal={formOpenModal}
-        onCloseModal={onCloseInvestModal}
-      />
       <div className="container">
         <ul className="dropdownNavbarItems">
           <li className="dropdownNavbarItem" onClick={() => setShow(false)}>
@@ -35,11 +27,6 @@ const DropdownNavbar = ({ setShow }) => {
           <li className="dropdownNavbarItem" onClick={() => setShow(false)}>
             <Link className="navitems-size" to="/properties">
               Properties
-            </Link>
-          </li>
-          <li className="dropdownNavbarItem" onClick={() => setShow(false)}>
-            <Link className="navitems-size" to="/previous-deals">
-              Previous Deals
             </Link>
           </li>
           <li className="dropdownNavbarItem" onClick={() => setShow(false)}>
@@ -57,12 +44,7 @@ const DropdownNavbar = ({ setShow }) => {
               Contact Us
             </Link>
           </li>
-          <li className="navbarItem">
-            <button className="navitemsButton" onClick={onOpenInvestModal}>
-              INVEST NOW
-            </button>
-          </li>
-          {/* {loginHidden === "true" ? (
+          {loginHidden === "true" ? (
             <>
               <li
                 className="dropdownNavbarItem"
@@ -125,7 +107,7 @@ const DropdownNavbar = ({ setShow }) => {
                 <i className="fa-solid fa-user me-2"></i>Login
               </Link>
             </li>
-          )} */}
+          )}
         </ul>
       </div>
     </div>
