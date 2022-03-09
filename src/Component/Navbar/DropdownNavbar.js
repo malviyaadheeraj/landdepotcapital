@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { onLogoutUser } from "../../store/homeAction";
-import InvestPopup from "../popups/InvestPopup/InvestPopup";
 
 const DropdownNavbar = ({ setShow }) => {
   const history = useHistory();

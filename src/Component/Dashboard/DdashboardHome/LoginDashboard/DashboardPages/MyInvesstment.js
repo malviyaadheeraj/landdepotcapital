@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { getMyInvestList } from "../../../../../store/homeAction";
 import "./MyInvest.css";
 import dateFormat from "dateformat";
-import GrowthPotentional from "./growthPotentional/GrowthPotentional";
 
 const MyInvesstment = ({ setCurrentTab }) => {
   const dispatch = useDispatch();
@@ -94,10 +93,6 @@ const MyInvesstment = ({ setCurrentTab }) => {
             </li>
           </ul>
         </div>
-        {/* <GrowthPotentional
-          calculatingAmount={calculateAmount()}
-          allProperties={0 || (getInvestmentList && getInvestmentList.length)}
-        /> */}
         <div className="property-detailswrap" style={{ overflowX: "auto" }}>
           <table className="table data-scrolls ">
             <thead className="tablehading-wrapper">

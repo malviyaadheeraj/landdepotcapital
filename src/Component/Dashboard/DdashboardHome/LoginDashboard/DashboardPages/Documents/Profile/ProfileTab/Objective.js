@@ -35,11 +35,7 @@ const Objective = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
                 assets - total debt Assets = cash, public investments, private
                 investments, real estate, etc.
               </label>
-              {/* <p>
-                Total net assets are the total assets (including cash and cash
-                equivalents, public and private investments, real estate) minus
-                total debt (including all loans, lines of credit, mortgages).
-              </p> */}
+
               <select
                 className="select-input-wrap"
                 onChange={(e) => onInputChange(e)}
@@ -59,13 +55,6 @@ const Objective = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
               <label className="object-heading">
                 What is your objective of investing?
               </label>
-              {/* <p>
-                Capital appreciation implies the asset may grow in value over
-                time. Regular cash flow implies the asset may generate dividends
-                during the time it is held. Total return is a combination of
-                both. Diversification implies diversifying with a new asset
-                class.
-              </p> */}
 
               <select
                 className="select-input-wrap"
@@ -91,11 +80,7 @@ const Objective = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
                 this is based on the assumption that the investment succeeds
                 your goals
               </label>
-              {/* <p>
-                Investment horizon is the total time that you plan to hold your
-                investment and it should align with your financial goals.
-              </p> */}
-              {/* <Select options={netAssetsOfShare} /> */}
+
               <select
                 className="select-input-wrap"
                 onChange={(e) => onInputChange(e)}
@@ -142,11 +127,7 @@ const Objective = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
               <label className="object-heading">
                 What previous experience do you have with investing?
               </label>
-              {/* <p>
-                Investment horizon is the total time that you plan to hold your
-                investment and it should align with your financial goals.
-              </p> */}
-              {/* <Select options={netAssetsOfShare} /> */}
+
               <select
                 className="select-input-wrap"
                 onChange={(e) => onInputChange(e)}

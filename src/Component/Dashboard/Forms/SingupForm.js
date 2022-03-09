@@ -261,14 +261,6 @@ const SingupForm = () => {
                   />
                   Facebook Account
                 </SocialButton>
-                {/* <button className="google-btn" onClick={handleFacebookLogin}>
-                  <img
-                    src="./images/facebook.png"
-                    alt="#"
-                    className="img-fluid google-img"
-                  />
-                  Facebook Account
-                </button> */}
               </div>
             </div>
           </div>

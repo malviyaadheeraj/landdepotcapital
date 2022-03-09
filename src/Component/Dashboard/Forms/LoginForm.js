@@ -89,22 +89,6 @@ const LoginForm = () => {
       });
   };
 
-  // const handleFacebookLogin = () => {
-  //   auth
-  //     .signInWithPopup(facebookProvider)
-  //     .then((res) => {
-  //       var token = res.credential.accessToken;
-  //       const facebookLoginData = {
-  //         provider: "facebook",
-  //         access_token: token,
-  //       };
-  //       dispatch(onFacebookLogin(facebookLoginData, history));
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
   const handleSocialLogin = (user) => {
     console.log(user._token.accessToken);
     const facebookLoginData = {
@@ -214,14 +198,6 @@ const LoginForm = () => {
                   />
                   Facebook Account
                 </SocialButton>
-                {/* <button className="google-btn" onClick={handleFacebookLogin}>
-                  <img
-                    src="./images/facebook.png"
-                    alt="#"
-                    className="img-fluid google-img"
-                  />
-                  Facebook Account
-                </button> */}
               </div>
             </div>
           </div>

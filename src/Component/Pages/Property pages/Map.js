@@ -4,6 +4,7 @@ const Map = ({ mapAddress }) => {
   return (
     <div style={{ width: "100%", height: "350px" }}>
       <iframe
+        title={mapAddress}
         width="100%"
         height="100%"
         frameBorder="0"

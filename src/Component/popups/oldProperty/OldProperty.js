@@ -1,38 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import PropertyPost from "./PropertyPost";
 import { useDispatch, useSelector } from "react-redux";
 import { getOldPropertyList } from "../../../store/homeAction";
-// const postsPerPage = 3;
-// let arrayForHoldingPosts = [];
 
 const OldProperty = () => {
   const dispatch = useDispatch();
   const getOldProperties = useSelector((state) => state.home.getOldProperties);
-  // const [postsToShow, setPostsToShow] = useState([]);
-  // const [next, setNext] = useState(3);
-
-  console.log(getOldProperties);
 
   useEffect(() => {
     dispatch(getOldPropertyList());
   }, [dispatch]);
-
-  // useEffect(() => {
-  //   loopWithSlice(0, postsPerPage);
-  // }, []);
-
-  // const loopWithSlice = (start, end) => {
-  //   const slicedPosts = getOldProperties && getOldProperties.slice(start, end);
-  //   arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
-  //   setPostsToShow(arrayForHoldingPosts);
-  // };
-
-  // const handleShowMorePosts = () => {
-  //   loopWithSlice(next, next + postsPerPage);
-  //   setNext(next + postsPerPage);
-  // };
 
   return (
     <>

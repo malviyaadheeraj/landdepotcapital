@@ -8,7 +8,6 @@ const PropertiesSlide = () => {
   const getHomeProperties = useSelector(
     (state) => state.home.getHomeProperties
   );
-  // const isPropertyliked = useSelector((state) => state.home.isPropertyliked);
 
   useEffect(() => {
     dispatch(getHomePropertyList());
@@ -21,12 +20,6 @@ const PropertiesSlide = () => {
 
     dispatch(onPropertyLiked(data));
   };
-
-  // const refreshPage = () => {
-  //   setTimeout(() => {
-  //     window.location.reload(false);
-  //   }, 10);
-  // };
 
   return (
     <div className="container section-T">

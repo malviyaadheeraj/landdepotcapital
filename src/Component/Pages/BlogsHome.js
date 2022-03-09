@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlogList, getBlogListId } from "../../store/homeAction";
-import { FacebookShareButton, LinkedinShareButton } from "react-share";
-import { FacebookIcon, LinkedinIcon } from "react-share";
+import { FacebookShareButton } from "react-share";
 import Helmet from "react-helmet";
 
 const BlogsHome = ({ match }) => {
@@ -73,44 +72,3 @@ const BlogsHome = ({ match }) => {
 };
 
 export default BlogsHome;
-
-{
-  /* <a
-            href={`https://www.linkedin.com/shareArticle/?url=${
-              getBlogsId && getBlogsId.blog.image
-            }`}
-            target="_blank"
-            title="Share on LinkedIn"
-          >
-            <i className="fab fa-linkedin-in Space_a_tag"></i>
-          </a>
-          <a
-            href={`https://www.facebook.com/sharer.php?t=${
-              getBlogsId && getBlogsId.blog.blog_name
-            }&u=https://landdepotcapital.ca/#/blog/${
-              getBlogsId && getBlogsId.blog.blog_name
-            }`}
-            target="_blank"
-            title={getBlogsId && getBlogsId.blog.blog_name}
-          >
-            <i className="fab fa-facebook-f Space_a_tag"></i>
-          </a> */
-}
-
-{
-  /* <FacebookShareButton
-url={shareUrl}
-quote={getBlogsId && getBlogsId.blog.blog_name}
->
-<FacebookIcon size={32} round={true} />
-</FacebookShareButton> */
-}
-
-{
-  /* <LinkedinShareButton
-url={shareUrl}
-quote={getBlogsId && getBlogsId.blog.blog_name}
->
-<LinkedinIcon size={32} round={true} />
-</LinkedinShareButton> */
-}

@@ -140,10 +140,7 @@ const Paymentstep = () => {
                       <button className="apply-btn">Apply</button>
                     </div>
                   </form>
-                  {/* <p className="great-line">
-                    Great The minimum Invesment amount has been reduced to $100
-                    for you first invesment
-                  </p> */}
+
                   <div className="check-wrapper mt-4">
                     <p>
                       <input type="checkbox" className="me-2" />
