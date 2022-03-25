@@ -77,7 +77,6 @@ const LoginForm = () => {
       .signInWithPopup(googleProvider)
       .then((res) => {
         var token = res.credential.accessToken;
-        console.log(token);
         const googleLoginData = {
           provider: "google",
           access_token: token,
@@ -90,7 +89,6 @@ const LoginForm = () => {
   };
 
   const handleSocialLogin = (user) => {
-    console.log(user._token.accessToken);
     const facebookLoginData = {
       provider: "facebook",
       access_token: user._token.accessToken,

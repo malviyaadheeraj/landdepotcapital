@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useHistory } from "react-router-dom";
 import "./Paymentstep.css";
 
@@ -55,6 +56,9 @@ const Paymentstep = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Payment</title>
+      </Helmet>
       <div className="container-fluid dashboardbg">
         <div className="container">
           <div className="row g-4">

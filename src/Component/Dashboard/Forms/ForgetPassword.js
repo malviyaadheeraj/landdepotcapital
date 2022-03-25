@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { onForgotPassword } from "../../../store/homeAction";
 
@@ -38,6 +39,9 @@ const ForgetPassword = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Forgot Password</title>
+      </Helmet>
       <div className="container-fluid formsbg">
         <div className="container forms-container">
           <div className="row">

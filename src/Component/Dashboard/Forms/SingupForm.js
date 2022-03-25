@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { auth, googleProvider } from "../../../firebase";
@@ -118,7 +119,6 @@ const SingupForm = () => {
   };
 
   const handleSocialLogin = (user) => {
-    console.log(user._token.accessToken);
     const facebookLoginData = {
       provider: "facebook",
       access_token: user._token.accessToken,
@@ -132,6 +132,9 @@ const SingupForm = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sign Up</title>
+      </Helmet>
       <div className="container-fluid formsbg">
         <div className="container forms-container">
           <div className="row">

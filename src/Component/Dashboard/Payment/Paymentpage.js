@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { updateInvestList } from "../../../store/homeAction";
@@ -33,6 +34,9 @@ const Paymentpage = ({ match }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Payment</title>
+      </Helmet>
       <div className="container-fluid dashboardbg">
         <div className="container payment-step-wrapper">
           <p className="stepsTitle">1. Payment Details</p>

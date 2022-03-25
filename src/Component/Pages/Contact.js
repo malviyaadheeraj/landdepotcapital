@@ -16,8 +16,6 @@ const Contact = ({ mailto }) => {
     dispatch(onSettingData());
   }, [dispatch]);
 
-  console.log(getSettingList);
-
   setTimeout(() => {
     if (getContactUs && getContactUs.status === true) {
       setThankYou(getContactUs && getContactUs.message);

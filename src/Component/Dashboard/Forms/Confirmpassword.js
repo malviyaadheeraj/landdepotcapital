@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { resetPassword } from "../../../store/homeAction";
@@ -70,6 +71,9 @@ const Confirmpassword = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Confirm Password</title>
+      </Helmet>
       <div className="container-fluid formsbg">
         <div className="container forms-container">
           <div className="row">

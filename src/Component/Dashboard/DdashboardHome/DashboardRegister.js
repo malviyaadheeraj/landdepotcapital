@@ -1,10 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "./DashbordHome.css";
 
 const DashboardHome = () => {
   return (
     <>
+      <Helmet>
+        <title>Thank You for Registration</title>
+      </Helmet>
       <div className="container-fluid dashboardbg">
         <div className="container homeWrapper">
           <h1>Thank you for Registration</h1>

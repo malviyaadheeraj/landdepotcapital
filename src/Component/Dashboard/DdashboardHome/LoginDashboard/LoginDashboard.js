@@ -7,6 +7,7 @@ import Profiletab from "./DashboardPages/Documents/Profile/Profiletab";
 import GrowthPotentional from "./DashboardPages/growthPotentional/GrowthPotentional";
 import { getMyInvestList } from "../../../../store/homeAction";
 import { useDispatch, useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const LoginDashboard = ({ match }) => {
   const dispatch = useDispatch();
@@ -39,6 +40,9 @@ const LoginDashboard = ({ match }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Login Dashboard</title>
+      </Helmet>
       <div className="LoginDashbord-wrapper">
         <div className="container">
           <div className="sidebarwrap">
