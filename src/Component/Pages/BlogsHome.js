@@ -53,13 +53,6 @@ const BlogsHome = ({ match }) => {
         <div className="container blogspage-wrapeer">
           <p className="blog-date">{getBlogsId && getBlogsId.date}</p>
           <h1>{getBlogsId && getBlogsId.blog.blog_name}</h1>
-          Share With{" "}
-          <FacebookShareButton
-            url={shareUrl}
-            quote={getBlogsId && getBlogsId.blog.blog_name}
-          >
-            <i className="fab fa-facebook-f Space_a_tag"></i>
-          </FacebookShareButton>
           <label
             dangerouslySetInnerHTML={{
               __html: getBlogsId && getBlogsId.blog.description,
