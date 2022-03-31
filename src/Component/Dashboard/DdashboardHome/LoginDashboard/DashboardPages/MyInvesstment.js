@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { getMyInvestList } from "../../../../../store/homeAction";
+import {
+  getMyInvestList,
+  getUserProfileData,
+} from "../../../../../store/homeAction";
 import "./MyInvest.css";
 import dateFormat from "dateformat";
+import { Helmet } from "react-helmet";
 
 const MyInvesstment = ({ setCurrentTab }) => {
   const dispatch = useDispatch();
@@ -14,8 +18,12 @@ const MyInvesstment = ({ setCurrentTab }) => {
   const getInvestmentList = useSelector(
     (state) => state.home.getInvestmentList
   );
+  const getUserProfileDetails = useSelector(
+    (state) => state.home.getUserProfileDetails
+  );
 
   useEffect(() => {
+    dispatch(getUserProfileData());
     dispatch(getMyInvestList());
   }, [dispatch]);
 
@@ -71,7 +79,10 @@ const MyInvesstment = ({ setCurrentTab }) => {
 
   return (
     <>
-      <div className="Investment-wrapeer">
+      <Helmet>
+        <title>My Investment</title>
+      </Helmet>
+      <div className="Investment-wrapeer ">
         <div className="invastment-tabwraper">
           <ul className="invastment-tabwrap">
             <li className="tabswraping">
@@ -91,9 +102,21 @@ const MyInvesstment = ({ setCurrentTab }) => {
                 <label>Number Of Properties</label>
               </p>
             </li>
+            <li className="tabswraping">
+              <img src="/images/money.png" alt="#" className="img-fluid" />
+              <p className="tabs-details">
+                <b>
+                  $
+                  {getUserProfileDetails &&
+                    getUserProfileDetails.creadit_points}
+                </b>
+                <br />
+                <label>Cradit Points</label>
+              </p>
+            </li>
           </ul>
         </div>
-        <div className="property-detailswrap" style={{ overflowX: "auto" }}>
+        <div className="property-detailswrap fade-in-bottom">
           <table className="table data-scrolls ">
             <thead className="tablehading-wrapper">
               <tr>

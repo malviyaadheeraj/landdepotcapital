@@ -55,3 +55,17 @@
 .growth-button-left h6 {
   font-size: 14px;
 }
+
+@media (max-width: 767px) {
+  .growth-potentional-wrapper {
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+  .growth-left {
+    margin-bottom: 20px;
+  }
+  .growth-left,
+  .growth-right {
+    width: 100%;
+  }
+}

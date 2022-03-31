@@ -3,7 +3,7 @@ import React from "react";
 const InsiderStaus = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
   return (
     <>
-      <div className="Insider-wrapper">
+      <div className="Insider-wrapper fade-in-bottom">
         <form onSubmit={(e) => onProfileDataSubmit(e, 2, true)}>
           <div className="row">
             <div className="col-md-12">

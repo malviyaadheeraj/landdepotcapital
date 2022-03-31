@@ -87,14 +87,26 @@ const Contact = ({ mailto }) => {
   return (
     <>
       <Helmet>
-        <title>{getSettingList && getSettingList.contactdata.seo_title}</title>
+        <title>
+          {getSettingList &&
+            getSettingList.contactdata &&
+            getSettingList.contactdata.seo_title}
+        </title>
         <meta
           name="description"
-          content={getSettingList && getSettingList.contactdata.seo_description}
+          content={
+            getSettingList &&
+            getSettingList.contactdata &&
+            getSettingList.contactdata.seo_description
+          }
         />
         <meta
           name="keyword"
-          content={getSettingList && getSettingList.contactdata.keyword}
+          content={
+            getSettingList &&
+            getSettingList.contactdata &&
+            getSettingList.contactdata.keyword
+          }
         />
       </Helmet>
       <div className="container-fluid pages-bg">
@@ -126,14 +138,18 @@ const Contact = ({ mailto }) => {
                     <li className="contect-details">
                       <a
                         href={`tel:${
-                          getSettingList && getSettingList.data.number
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.number
                         }`}
                         className="social-link contect-detailsLink"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <strong>
-                          {getSettingList && getSettingList.data.number}
+                          {getSettingList &&
+                            getSettingList.data &&
+                            getSettingList.data.number}
                         </strong>
                       </a>
                     </li>
@@ -151,13 +167,17 @@ const Contact = ({ mailto }) => {
                     <li className="contect-details">
                       <a
                         href={`mailto:${
-                          getSettingList && getSettingList.data.email
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.email
                         }`}
                         className="social-link contect-detailsLink"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {getSettingList && getSettingList.data.email}
+                        {getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.email}
                       </a>
                     </li>
                   </ul>
@@ -171,7 +191,11 @@ const Contact = ({ mailto }) => {
                   <ul className="ps-3">
                     <li className="contect-hading">Office Address</li>
                     <li className="contect-details">
-                      <b>{getSettingList && getSettingList.data.address}</b>
+                      <b>
+                        {getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.address}
+                      </b>
                     </li>
                   </ul>
                 </div>
@@ -182,7 +206,9 @@ const Contact = ({ mailto }) => {
                       <a
                         className="social-link"
                         href={
-                          getSettingList && getSettingList.data.facebook_url
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.facebook_url
                         }
                         target="_blank"
                         rel="noopener noreferrer"
@@ -194,7 +220,9 @@ const Contact = ({ mailto }) => {
                       <a
                         className="social-link"
                         href={
-                          getSettingList && getSettingList.data.pinterest_url
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.pinterest_url
                         }
                         target="_blank"
                         rel="noopener noreferrer"
@@ -205,7 +233,11 @@ const Contact = ({ mailto }) => {
                     <li>
                       <a
                         className="social-link"
-                        href={getSettingList && getSettingList.data.twitter_url}
+                        href={
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.twitter_url
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -215,7 +247,9 @@ const Contact = ({ mailto }) => {
                     <li>
                       <a
                         href={
-                          getSettingList && getSettingList.data.linkedin_url
+                          getSettingList &&
+                          getSettingList.data &&
+                          getSettingList.data.linkedin_url
                         }
                         target="_blank"
                         className="social-link"
@@ -237,7 +271,9 @@ const Contact = ({ mailto }) => {
                   className="contact-form-body"
                   dangerouslySetInnerHTML={{
                     __html:
-                      getSettingList && getSettingList.contactdata.description,
+                      getSettingList &&
+                      getSettingList.contactdata &&
+                      getSettingList.contactdata.description,
                   }}
                 ></p>
                 <div className="form-group contactFormSubmit row">

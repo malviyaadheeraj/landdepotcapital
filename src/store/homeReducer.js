@@ -35,6 +35,7 @@ import {
   SET_EVENT_WEBINARS_LIST_BY_ID,
   SET_COUNTRIES,
   SET_OLD_PROPERTY,
+  SET_REFERAL,
 } from "./types";
 
 const initalState = {};
@@ -220,6 +221,11 @@ const homeReducer = (state = initalState, action) => {
       return {
         ...state,
         getCountries: action.payload,
+      };
+    case SET_REFERAL:
+      return {
+        ...state,
+        getReferalUsers: action.payload,
       };
     default:
       return state;

@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA6x42sg9wo7TkoXG4G5t_mBWGYMfklXvc",
-  authDomain: "landdepot-a42bf.firebaseapp.com",
-  projectId: "landdepot-a42bf",
-  storageBucket: "landdepot-a42bf.appspot.com",
-  messagingSenderId: "320599688210",
-  appId: "1:320599688210:web:1a57a9ef523f560cfc84cb",
-  measurementId: "G-8KMEG014NE",
+  apiKey: "AIzaSyCgP5OmarOr4r29hXzF2X93bMsDpRyM98o",
+  authDomain: "landepotcapital.firebaseapp.com",
+  projectId: "landepotcapital",
+  storageBucket: "landepotcapital.appspot.com",
+  messagingSenderId: "59212570616",
+  appId: "1:59212570616:web:6c2aa279f9d3b6e8e9800d",
+  measurementId: "G-BWSF75DKNF",
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

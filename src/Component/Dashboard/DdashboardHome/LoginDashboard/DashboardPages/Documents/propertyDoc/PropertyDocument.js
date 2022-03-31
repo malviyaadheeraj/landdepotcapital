@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import dateFormat from "dateformat";
-import Helmet from "react-helmet";
 
 const PropertyDocument = ({ getInvestmentList }) => {
   const dateCreatedAt = dateFormat(
@@ -11,10 +10,7 @@ const PropertyDocument = ({ getInvestmentList }) => {
 
   return (
     <>
-      <Helmet>
-        <title>Property Document</title>
-      </Helmet>
-      <div className="property-detailswrap mt-4">
+      <div className="property-detailswrap mt-4 fade-in-bottom">
         <table className="table ">
           <thead className="tablehading-wrapper">
             <tr>

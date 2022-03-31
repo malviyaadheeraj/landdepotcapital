@@ -9,7 +9,7 @@ const QuarterlyStatements = ({ getInvestmentList }) => {
   );
 
   return (
-    <div className="property-detailswrap mt-4">
+    <div className="property-detailswrap mt-4 fade-in-bottom">
       <table className="table ">
         <thead className="tablehading-wrapper">
           <tr>

@@ -35,6 +35,7 @@ import {
   SET_EVENT_WEBINARS_LIST_BY_ID,
   SET_COUNTRIES,
   SET_OLD_PROPERTY,
+  SET_REFERAL,
 } from "./types";
 
 const config = {
@@ -423,10 +424,20 @@ export const onSettingData = (data) => (dispatch) => {
 
 // Countries
 export const getCountriesData = (data) => (dispatch) => {
-  Axios.get("countrylist").then((res) => {
+  Axios.get("/countrylist").then((res) => {
     dispatch({
       type: SET_COUNTRIES,
       payload: res.data.countrylist,
+    });
+  });
+};
+
+// REFERAL
+export const getMyReferal = (data) => (dispatch) => {
+  Axios.get("/myReferal", config).then((res) => {
+    dispatch({
+      type: SET_REFERAL,
+      payload: res.data.data,
     });
   });
 };

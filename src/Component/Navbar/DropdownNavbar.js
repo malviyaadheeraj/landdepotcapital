@@ -79,6 +79,7 @@ const DropdownNavbar = ({ setShow }) => {
                 <i className="far fa-address-card me-2"></i>
                 <span>My Documents</span>
               </li>
+
               <li
                 className="dropdownNavbarItem"
                 onClick={() => {
@@ -88,6 +89,26 @@ const DropdownNavbar = ({ setShow }) => {
               >
                 <i className="far fa-user me-2"></i>
                 <span>My Profile</span>
+              </li>
+              <li
+                className="dropdownNavbarItem"
+                onClick={() => {
+                  setShow(false);
+                  history.push(`/login-dashboard/growth`);
+                }}
+              >
+                <i className="far fa-user me-2"></i>
+                <span>Growth Potentional</span>
+              </li>
+              <li
+                className="dropdownNavbarItem"
+                onClick={() => {
+                  setShow(false);
+                  history.push(`/login-dashboard/referal`);
+                }}
+              >
+                <i className="far fa-user me-2"></i>
+                <span>Referal</span>
               </li>
               <li
                 className="dropdownNavbarItem"

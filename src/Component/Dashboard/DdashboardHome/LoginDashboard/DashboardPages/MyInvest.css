@@ -11,14 +11,14 @@
   padding: 0;
   width: 100%;
   height: auto;
-  display: block;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 .invastment-tabwrap li {
-  float: left;
   padding: 16px;
-  width: 30%;
+  width: 32%;
   border-radius: 10px;
   background-color: #fff;
 }
@@ -43,10 +43,7 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 10px 10px;
-}
-
-.tabswraping {
-  margin-right: 20px;
+  overflow-x: auto;
 }
 
 .tablehading-wrapper {
@@ -129,9 +126,12 @@ td {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .invastment-tabwrap li {
     width: 100%;
+  }
+  .invastment-tabwrap {
+    flex-direction: column;
   }
   .tabswraping {
     margin-top: 20px;

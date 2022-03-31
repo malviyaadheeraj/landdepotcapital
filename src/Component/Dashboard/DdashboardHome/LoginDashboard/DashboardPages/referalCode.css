@@ -1,0 +1,63 @@
+.referal-wrapper {
+  margin-top: 10px;
+}
+.referal-input small {
+  position: absolute;
+  top: -30px;
+  right: 35px;
+}
+.referal-input input:focus {
+  outline: none !important;
+  border: none;
+}
+
+.copybtn {
+  border: none;
+  background-color: #ec111a;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px 20px;
+  transition: all 0.2s;
+}
+.copybtn:hover {
+  background-color: #0075be;
+  color: white;
+  transition: all 0.2s;
+}
+
+.referal-users-wrapper {
+  margin-top: 30px;
+}
+
+.referal-heading {
+  margin-bottom: 20px;
+}
+.referal-users {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.referal-user {
+  width: 49%;
+  background-color: #fff;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+.copiedIcon {
+  font-weight: 600;
+}
+.referal-info {
+  display: flex;
+  padding: 3px 0px;
+}
+.referal-info h6 {
+  width: 30%;
+  font-size: 16px;
+  font-weight: 600;
+}
+.referal-info span {
+  width: 70%;
+  font-size: 16px;
+  font-weight: 400;
+}

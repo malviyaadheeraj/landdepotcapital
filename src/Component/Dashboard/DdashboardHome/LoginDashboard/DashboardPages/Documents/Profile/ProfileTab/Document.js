@@ -10,7 +10,7 @@ const Document = ({
 }) => {
   return (
     <>
-      <div className="document-wrapper">
+      <div className="document-wrapper fade-in-bottom">
         <form onSubmit={(e) => onProfileDataSubmit(e, 3, true)}>
           <div className="row">
             <div className="col-md-10 mb-3">

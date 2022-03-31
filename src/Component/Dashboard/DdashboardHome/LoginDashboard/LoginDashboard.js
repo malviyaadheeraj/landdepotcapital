@@ -8,6 +8,7 @@ import GrowthPotentional from "./DashboardPages/growthPotentional/GrowthPotentio
 import { getMyInvestList } from "../../../../store/homeAction";
 import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
+import ReferalCode from "./DashboardPages/ReferalCode";
 
 const LoginDashboard = ({ match }) => {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ const LoginDashboard = ({ match }) => {
             )}
             {currentTab === "my-documents" && <PropertyDoc />}
             {currentTab === "my-profile" && <Profiletab />}
+            {currentTab === "referal" && <ReferalCode />}
             {currentTab === "growth" && (
               <GrowthPotentional
                 allProperties={

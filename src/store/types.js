@@ -68,4 +68,6 @@ export const SET_SETTING_LIST = "SET_SETTING_LIST";
 
 export const SET_COUNTRIES = "SET_COUNTRIES";
 
-export const SET_OLD_PROPERTY = "SET_OLD_PROPERTY"
+export const SET_OLD_PROPERTY = "SET_OLD_PROPERTY";
+
+export const SET_REFERAL = "SET_REFERAL";

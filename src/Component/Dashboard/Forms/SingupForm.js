@@ -11,7 +11,7 @@ import {
 import "./LoginForm.css";
 import SocialButton from "./SocialButton ";
 
-const SingupForm = () => {
+const SingupForm = ({ match }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [values, setValues] = useState({});
@@ -97,6 +97,7 @@ const SingupForm = () => {
       email: values.email,
       password: values.password,
       confirm_password: values.confirm_password,
+      referal_code: match.params.token,
     };
 
     dispatch(onRegister(data, history));

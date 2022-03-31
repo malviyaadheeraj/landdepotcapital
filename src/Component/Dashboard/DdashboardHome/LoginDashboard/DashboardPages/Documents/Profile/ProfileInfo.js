@@ -20,7 +20,7 @@ const ProfileInfo = ({
 
   return (
     <>
-      <div className="profileform-wraper">
+      <div className="profileform-wraper fade-in-bottom">
         <form onSubmit={(e) => onProfileDataSubmit(e, 0, true)}>
           <div className="profileinpt-wrap">
             <div className="inpt-wrapper mb-3 ">

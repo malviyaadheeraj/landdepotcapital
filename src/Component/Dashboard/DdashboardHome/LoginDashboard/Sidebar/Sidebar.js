@@ -66,6 +66,18 @@ const Sidebar = ({ setCurrentTab, currentTab }) => {
             <i className="far fa-address-card me-2"></i>
             <span>Growth Potentional</span>
           </li>
+          <li
+            className={`sidebar-item ${
+              currentTab === "referal" && "sidebar-item-active"
+            }`}
+            onClick={() => {
+              history.push(`/login-dashboard/referal`);
+              setCurrentTab("referal");
+            }}
+          >
+            <i className="far fa-address-card me-2"></i>
+            <span>Referal</span>
+          </li>
           <li className="sidebar-item" onClick={handleLogout}>
             <i className="fas fa-sign-out-alt me-2"></i> <span> Logout</span>
           </li>

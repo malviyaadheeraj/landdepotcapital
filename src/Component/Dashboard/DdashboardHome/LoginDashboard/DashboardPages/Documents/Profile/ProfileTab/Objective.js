@@ -4,7 +4,7 @@ import "./Profiletabs.css";
 const Objective = ({ profileValue, onInputChange, onProfileDataSubmit }) => {
   return (
     <>
-      <div className="Objectibe-wrapper">
+      <div className="Objectibe-wrapper fade-in-bottom">
         <form onSubmit={(e) => onProfileDataSubmit(e, 1, true)}>
           <div className="Row">
             <div className="col-md-12">

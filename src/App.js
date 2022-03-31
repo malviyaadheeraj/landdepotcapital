@@ -74,6 +74,7 @@ function App() {
           <Route exact path="/thank-you" component={DashboardRegister}></Route>
           <Route exact path="/paymentstep" component={Paymentstep}></Route>
           <Route exact path="/singupForm" component={SingupForm}></Route>
+          <Route exact path="/singupForm/:token" component={SingupForm}></Route>
           <Route
             exact
             path="/invest-details/:invest_id"

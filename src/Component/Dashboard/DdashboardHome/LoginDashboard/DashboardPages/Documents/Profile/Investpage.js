@@ -16,7 +16,7 @@ const Investpage = ({
 
   return (
     <>
-      <div className="review-pagewrapper">
+      <div className="review-pagewrapper fade-in-bottom">
         <div className="info-edit-wrapp">
           <p className="proinfo-line">
             01. Personal Information

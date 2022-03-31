@@ -88,6 +88,10 @@
   background-color: #f2f2f0;
 }
 
+.persnol-info-input option:focus {
+  background-color: #008f1f;
+}
+
 .postalinpt-wrap {
   width: 97.5%;
   padding: 11px 17px;

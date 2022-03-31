@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Profiletab.css";
+import { Helmet } from "react-helmet";
 import Investpage from "./Investpage";
 import ProfileInfo from "./ProfileInfo";
 import Document from "./ProfileTab/Document";
@@ -365,97 +366,102 @@ const Profiletab = () => {
   };
 
   return (
-    <div className="Property-wraper">
-      <div className="Property-tabwraper">
-        <span
-          className={`profile-item ${
-            currentTab === 0 && "profile-item-active"
-          }`}
-          onClick={() => setCurrentTab(0)}
-        >
-          Personal Information
-        </span>
-        <span
-          className={`profile-item ${
-            currentTab === 1 && "profile-item-active"
-          }`}
-          onClick={() => setCurrentTab(1)}
-        >
-          Objective and Experience
-        </span>
-        <span
-          className={`profile-item  ${
-            currentTab === 2 && "profile-item-active"
-          }`}
-          onClick={() => setCurrentTab(2)}
-        >
-          Insider staus & AML
-        </span>
-        <span
-          className={`profile-item ${
-            currentTab === 3 && "profile-item-active"
-          }`}
-          onClick={() => setCurrentTab(3)}
-        >
-          Documents
-        </span>
-        <span
-          className={`profile-item ${
-            currentTab === 4 && "profile-item-active"
-          }`}
-          onClick={() => setCurrentTab(4)}
-        >
-          Review
-        </span>
-      </div>
+    <>
+      <Helmet>
+        <title>My Profile</title>
+      </Helmet>
+      <div className="Property-wraper">
+        <div className="Property-tabwraper">
+          <span
+            className={`profile-item ${
+              currentTab === 0 && "profile-item-active"
+            }`}
+            onClick={() => setCurrentTab(0)}
+          >
+            Personal Information
+          </span>
+          <span
+            className={`profile-item ${
+              currentTab === 1 && "profile-item-active"
+            }`}
+            onClick={() => setCurrentTab(1)}
+          >
+            Objective and Experience
+          </span>
+          <span
+            className={`profile-item  ${
+              currentTab === 2 && "profile-item-active"
+            }`}
+            onClick={() => setCurrentTab(2)}
+          >
+            Insider staus & AML
+          </span>
+          <span
+            className={`profile-item ${
+              currentTab === 3 && "profile-item-active"
+            }`}
+            onClick={() => setCurrentTab(3)}
+          >
+            Documents
+          </span>
+          <span
+            className={`profile-item ${
+              currentTab === 4 && "profile-item-active"
+            }`}
+            onClick={() => setCurrentTab(4)}
+          >
+            Review
+          </span>
+        </div>
 
-      {currentTab === 0 && (
-        <ProfileInfo
-          profileValue={values}
-          onInputChange={onInputChange}
-          onProfileDataSubmit={onDataSubmit}
-          residentalMessage={residentalState}
-          employmentMessage={employmentState}
-          onResidentalChange={onResidentalChange}
-          onEmploymentChange={onEmploymentChange}
-        />
-      )}
-      {currentTab === 1 && (
-        <Objective
-          profileValue={values}
-          onInputChange={onInputChange}
-          onProfileDataSubmit={onDataSubmit}
-        />
-      )}
-      {currentTab === 2 && (
-        <InsiderStaus
-          profileValue={values}
-          onInputChange={onInputChange}
-          onProfileDataSubmit={onDataSubmit}
-        />
-      )}
-      {currentTab === 3 && (
-        <Document
-          onProfileDataSubmit={onDataSubmit}
-          profileValue={values}
-          certificateFile={certificateFile}
-          onChangeCertificateFile={(file) => setCertificateFile(file)}
-          dentificationFile={dentificationFile}
-          onChangeDentificationFile={(file) => setDentificationFile(file)}
-        />
-      )}
-      {currentTab === 4 && (
-        <Investpage
-          setCurrentTab={setCurrentTab}
-          profileInfo={profileInfo}
-          objective={objective}
-          insiderStatus={insiderStatus}
-          document={document}
-          investProperty={onInvestProperty}
-          message={message}
-        />
-      )}
-    </div>
+        {currentTab === 0 && (
+          <ProfileInfo
+            profileValue={values}
+            onInputChange={onInputChange}
+            onProfileDataSubmit={onDataSubmit}
+            residentalMessage={residentalState}
+            employmentMessage={employmentState}
+            onResidentalChange={onResidentalChange}
+            onEmploymentChange={onEmploymentChange}
+          />
+        )}
+        {currentTab === 1 && (
+          <Objective
+            profileValue={values}
+            onInputChange={onInputChange}
+            onProfileDataSubmit={onDataSubmit}
+          />
+        )}
+        {currentTab === 2 && (
+          <InsiderStaus
+            profileValue={values}
+            onInputChange={onInputChange}
+            onProfileDataSubmit={onDataSubmit}
+          />
+        )}
+        {currentTab === 3 && (
+          <Document
+            onProfileDataSubmit={onDataSubmit}
+            profileValue={values}
+            certificateFile={certificateFile}
+            onChangeCertificateFile={(file) => setCertificateFile(file)}
+            dentificationFile={dentificationFile}
+            onChangeDentificationFile={(file) => setDentificationFile(file)}
+          />
+        )}
+        {currentTab === 4 && (
+          <Investpage
+            setCurrentTab={setCurrentTab}
+            profileInfo={profileInfo}
+            objective={objective}
+            insiderStatus={insiderStatus}
+            document={document}
+            investProperty={onInvestProperty}
+            message={message}
+          />
+        )}
+      </div>
+    </>
   );
 };
 
