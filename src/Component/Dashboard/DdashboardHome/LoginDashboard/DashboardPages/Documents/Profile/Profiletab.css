@@ -49,6 +49,7 @@
 .profile-item-active {
   background-color: #ec111a;
   color: #fff;
+  transition: all 0.5s ;
 }
 
 /* Form profile */

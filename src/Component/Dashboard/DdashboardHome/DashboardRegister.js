@@ -10,7 +10,7 @@ const DashboardHome = () => {
         <title>Thank You for Registration</title>
       </Helmet>
       <div className="container-fluid dashboardbg">
-        <div className="container homeWrapper">
+        <div className="container homeWrapper  fade-in-bottom">
           <h1>Thank you for Registration</h1>
           <p>Please check your email and verify your account...</p>
           <Link to="/login">

@@ -38,7 +38,7 @@ const Paymentpage = ({ match }) => {
         <title>Payment</title>
       </Helmet>
       <div className="container-fluid dashboardbg">
-        <div className="container payment-step-wrapper">
+        <div className="container payment-step-wrapper  fade-in-bottom">
           <p className="stepsTitle">1. Payment Details</p>
           <div>
             <ul className="paymentTab">

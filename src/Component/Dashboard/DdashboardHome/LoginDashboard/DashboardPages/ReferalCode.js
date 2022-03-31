@@ -6,8 +6,22 @@ import {
   getMyReferal,
   getUserProfileData,
 } from "../../../../../store/homeAction";
-import { FacebookButton, FacebookCount } from "react-social";
+import {
+  FacebookButton,
+  FacebookCount,
+  GooglePlusButton,
+  GooglePlusCount,
+} from "react-social";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
 
 const ReferalCode = () => {
   const dispatch = useDispatch();
@@ -17,6 +31,9 @@ const ReferalCode = () => {
     (state) => state.home.getUserProfileDetails
   );
   const getReferalUsers = useSelector((state) => state.home.getReferalUsers);
+  const shareUrl = `http://capital.landdepotcapital.ca/#/singupForm/${
+    getUserProfileDetails && getUserProfileDetails.referal_code
+  }`;
 
   useEffect(() => {
     dispatch(getUserProfileData());
@@ -64,9 +81,35 @@ const ReferalCode = () => {
             Copy Code
           </button>
         </div>
+        <div className="d-flex justify-content-center py-3">
+          <div className="p-2">
+            <FacebookShareButton url={shareUrl}>
+              <FacebookIcon size={32} round />
+              <span style={{ marginLeft: "10px", fontWeight: "500" }}>
+                Send Via link on facebook
+              </span>
+            </FacebookShareButton>
+          </div>
+          <div className="p-2">
+            <EmailShareButton url={shareUrl} body="body">
+              <EmailIcon size={32} round />
+              <span style={{ marginLeft: "10px", fontWeight: "500" }}>
+                Send Via link on Email
+              </span>
+            </EmailShareButton>
+          </div>
+          <div className="p-2">
+            <WhatsappShareButton url={shareUrl} separator=":: ">
+              <WhatsappIcon size={32} round />
+              <span style={{ marginLeft: "10px", fontWeight: "500" }}>
+                Send Via link on Whatsapp
+              </span>
+            </WhatsappShareButton>
+          </div>
+        </div>
 
         <div className="property-detailswrap mt-4 fade-in-bottom">
-          <table className="table ">
+          <table className="table">
             <thead className="tablehading-wrapper">
               <tr>
                 <th className="tabelheadsline">First Name</th>

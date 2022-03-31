@@ -59,9 +59,9 @@ const Paymentstep = () => {
       <Helmet>
         <title>Payment</title>
       </Helmet>
-      <div className="container-fluid dashboardbg">
+      <div className="container-fluid dashboardbg ">
         <div className="container">
-          <div className="row g-4">
+          <div className="row g-4 fade-in-bottom">
             <div className="col-md-6 col-sm-12 col-lg-5 mt-4 ">
               <div className=" payment-stepbgwrap">
                 <div className="propertyimg-wrap">

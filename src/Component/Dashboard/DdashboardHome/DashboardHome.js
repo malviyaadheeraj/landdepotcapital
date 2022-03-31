@@ -10,7 +10,7 @@ const DashboardHome = () => {
         <title>Thank You</title>
       </Helmet>
       <div className="container-fluid dashboardbg">
-        <div className="container homeWrapper">
+        <div className="container homeWrapper fade-in-bottom">
           <h1>ALMOST THERE...</h1>
 
           <p>
