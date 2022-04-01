@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlogList, getBlogListId } from "../../store/homeAction";
-import { FacebookShareButton } from "react-share";
 import Helmet from "react-helmet";
 
 const BlogsHome = ({ match }) => {
   const dispatch = useDispatch();
   const getBlogsId = useSelector((state) => state.home.getBlogsId);
   const getBlogs = useSelector((state) => state.home.getBlogs);
-  const shareUrl =
-    "https://landdepotcapital.ca/#/blog/time-share-vs-fractional-ownership-which-one-is-best-for-youo97s548zoe";
 
   useEffect(() => {
     dispatch(getBlogList());
@@ -41,6 +38,10 @@ const BlogsHome = ({ match }) => {
           content={getBlogsId && getBlogsId.blog.seo_description}
         />
         <meta name="keyword" content={getBlogsId && getBlogsId.blog.keyword} />
+        <link
+          rel="canonical"
+          href={`/blog/${getBlogsId && getBlogsId.blog.blog_seo}`}
+        ></link>
       </Helmet>
       <div
         className="container-fluid pages-bg"

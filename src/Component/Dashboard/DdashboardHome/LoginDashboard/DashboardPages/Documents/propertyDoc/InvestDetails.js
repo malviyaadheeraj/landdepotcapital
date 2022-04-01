@@ -20,13 +20,14 @@ const Propertydetails = ({ match }) => {
 
   const dateCreatedAt = dateFormat(
     singleInvestList && singleInvestList.created_at,
-    "dd mmmm,yy"
+    "dd mmmm, yyyy"
   );
 
   return (
     <>
       <Helmet>
         <title>Invest Details</title>
+        <link rel="canonical" href="/invest-details/:invest_id"></link>
       </Helmet>
       <div className="LoginDashbord-wrapper">
         <div className="container">

@@ -1,15 +1,32 @@
 .referal-wrapper {
   margin-top: 10px;
 }
+
 .referal-input small {
   position: absolute;
   top: -30px;
   right: 35px;
 }
-.referal-input input:focus {
-  outline: none !important;
-  border: none;
+
+.referal-input {
+  width: 100%;
+  display: flex;
 }
+
+.referal-input input {
+  width: 80%;
+  height: 40px;
+  border: 1px solid #000;
+}
+
+.referal-input input:focus {
+  outline: 0;
+}
+
+.referal-input input[type="text"] {
+  font-size: 18px;
+}
+
 
 .copybtn {
   border: none;
@@ -17,9 +34,11 @@
   color: white;
   font-weight: 600;
   font-size: 14px;
-  padding: 0px 20px;
+  width: 20%;
+  height: 40px;
   transition: all 0.2s;
 }
+
 .copybtn:hover {
   background-color: #0075be;
   color: white;
@@ -33,31 +52,58 @@
 .referal-heading {
   margin-bottom: 20px;
 }
+
 .referal-users {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
+.referal-shareButton {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
 .referal-user {
   width: 49%;
   background-color: #fff;
   padding: 20px 20px;
   border-radius: 10px;
 }
+
 .copiedIcon {
   font-weight: 600;
 }
+
 .referal-info {
   display: flex;
   padding: 3px 0px;
 }
+
 .referal-info h6 {
   width: 30%;
   font-size: 16px;
   font-weight: 600;
 }
+
 .referal-info span {
   width: 70%;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media(max-width: 767px) {
+  .referal-shareButton {
+    flex-direction: column;
+    padding: 0px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 481px) {
+  .referal-shareButton {
+    width: 100%;
+  }
 }

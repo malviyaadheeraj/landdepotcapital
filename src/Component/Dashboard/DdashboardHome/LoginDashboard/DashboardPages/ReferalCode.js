@@ -6,14 +6,7 @@ import {
   getMyReferal,
   getUserProfileData,
 } from "../../../../../store/homeAction";
-import {
-  FacebookButton,
-  FacebookCount,
-  GooglePlusButton,
-  GooglePlusCount,
-} from "react-social";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 import {
   EmailIcon,
   EmailShareButton,
@@ -60,16 +53,12 @@ const ReferalCode = () => {
         </p>
         <label>Referal Link</label>
         <div className="input-group mb-3 referal-input">
-          {show && <small className="copiedIcon">Copied</small>}
           <input
             type="text"
             id="foo"
-            className="form-control"
             value={`http://capital.landdepotcapital.ca/#/singupForm/${
               getUserProfileDetails && getUserProfileDetails.referal_code
             }`}
-            aria-label="Username"
-            aria-describedby="basic-addon1"
             onChange={(e) => e}
           />
           <button
@@ -78,18 +67,18 @@ const ReferalCode = () => {
             data-clipboard-target="#foo"
             onClick={copyCodeButton}
           >
-            Copy Code
+            {show ? "Copied" : "Copy Link"}
           </button>
         </div>
-        <div className="d-flex justify-content-center py-3">
-          <div className="p-2">
+        <div className="referal-shareButton">
+          {/* <div className="p-2">
             <FacebookShareButton url={shareUrl}>
               <FacebookIcon size={32} round />
               <span style={{ marginLeft: "10px", fontWeight: "500" }}>
                 Send Via link on facebook
               </span>
             </FacebookShareButton>
-          </div>
+          </div> */}
           <div className="p-2">
             <EmailShareButton url={shareUrl} body="body">
               <EmailIcon size={32} round />
@@ -144,29 +133,6 @@ const ReferalCode = () => {
             </tbody>
           </table>
         </div>
-        {/* 
-      <div className="referal-users-wrapper ">
-      <h5 className="referal-heading">Referal User List</h5>
-      <div className="referal-users fade-in-bottom">
-      {getReferalUsers &&
-        getReferalUsers.map((item, key) => (
-          <div className="referal-user" key={key}>
-          <div className="referal-info">
-          <h6>First Name :</h6>
-          <span>{item.first_name}</span>
-          </div>
-          <div className="referal-info">
-          <h6>Last Name : </h6>
-          <span>{item.last_name}</span>
-          </div>
-          <div className="referal-info">
-          <h6> Email : </h6>
-          <span>{item.email}</span>
-          </div>
-          </div>
-          ))}
-          </div>
-        </div> */}
       </div>
     </>
   );

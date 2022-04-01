@@ -38,8 +38,8 @@ const PropertiesSlide = () => {
                     alt=""
                   />
                   <div className="card-upper-text">
-                    {properties.tags.split(",").map((item) => (
-                      <label className="just-text text-capitalize">
+                    {properties.tags.split(",").map((item, key) => (
+                      <label className="just-text text-capitalize" key={key}>
                         {item}
                       </label>
                     ))}

@@ -21,6 +21,7 @@ const Home = () => {
     <>
       <Helmet>
         <title>Land Depot Capital</title>
+        <link rel="canonical" href="/"></link>
       </Helmet>
 
       <div className="container-fluid first-bg">
@@ -150,10 +151,10 @@ const Home = () => {
               </div>
             </div>
 
-            <div class="col-md-6 col-sm-12">
+            <div className="col-md-6 col-sm-12">
               <img
                 alt="#"
-                class="img-fluid mob-img-wrapper"
+                className="img-fluid mob-img-wrapper"
                 src="/images/04.png"
               />
             </div>

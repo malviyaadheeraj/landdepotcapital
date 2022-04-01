@@ -34,68 +34,96 @@ import conformpassword from "./Component/Dashboard/Forms/Confirmpassword";
 import ProtectedRoute from "./ProtectedRoute";
 import PropertyDocument from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/PropertyDocument";
 import InvestDetails from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/InvestDetails";
+import { HashRouter } from "react-router-dom";
+import ScrollToTop from "react-router-scroll-top";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/properties" component={Properties} />
-          <Route exact path="/property/:property_id" component={PropertyPage} />
-          <Route exact path="/previous-deals" component={OldProperty} />
-          <Route exact path="/invest-property" component={InvestNowPopup} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/blogs" component={Blogs} />
-          <Route exact path="/blog/:blog_id" component={BlogsHome} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/ourstory" component={OurStory} />
-          <Route exact path="/team" component={Team} />
-          <Route exact path="/advisors" component={Advisors} />
-          <Route exact path="/careers" component={Careers} />
-          <Route exact path="/events" component={Events} />
-          <Route
-            exact
-            path="/event-details/:event_id"
-            component={EventDetails}
-          />
-          <Route exact path="/faq" component={Faq} />
-          <Route exact path="/terms" component={Terms} />
-          <Route exact path="/privacy" component={Privacy} />
-          <Route exact path="/keyDisclosure" component={KeyDisclosure} />
-          <ProtectedRoute
-            exact
-            path="/login-dashboard/:id"
-            component={LoginDashboard}
-          ></ProtectedRoute>
-          <Route exact path="/paymentpage/:id" component={Paymentpage}></Route>
-          <Route exact path="/dashboardHome" component={DashboardHome}></Route>
-          <Route exact path="/thank-you" component={DashboardRegister}></Route>
-          <Route exact path="/paymentstep" component={Paymentstep}></Route>
-          <Route exact path="/singupForm" component={SingupForm}></Route>
-          <Route exact path="/singupForm/:token" component={SingupForm}></Route>
-          <Route
-            exact
-            path="/invest-details/:invest_id"
-            component={InvestDetails}
-          ></Route>
-          <Route exact path="/propertdoc" component={PropertyDocument}></Route>
-          <Route exact path="/forgetpassword" component={ForgetPassword} />
-          <Route
-            exact
-            path="/userresetpassword/:token"
-            component={conformpassword}
-          />
-          {localStorage.getItem("landdepot-login") ? (
-            <Route exact path="/login" component={Home}></Route>
-          ) : (
-            <Route exact path="/login" component={LoginForm}></Route>
-          )}
-        </Switch>
-      </div>
-      <Footer />
-    </>
+    <HashRouter basename="/">
+      <ScrollToTop>
+        <Navbar />
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/properties" component={Properties} />
+            <Route
+              exact
+              path="/property/:property_id"
+              component={PropertyPage}
+            />
+            <Route exact path="/previous-deals" component={OldProperty} />
+            <Route exact path="/invest-property" component={InvestNowPopup} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/blogs" component={Blogs} />
+            <Route exact path="/blog/:blog_id" component={BlogsHome} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/ourstory" component={OurStory} />
+            <Route exact path="/team" component={Team} />
+            <Route exact path="/advisors" component={Advisors} />
+            <Route exact path="/careers" component={Careers} />
+            <Route exact path="/events" component={Events} />
+            <Route
+              exact
+              path="/event-details/:event_id"
+              component={EventDetails}
+            />
+            <Route exact path="/faq" component={Faq} />
+            <Route exact path="/terms" component={Terms} />
+            <Route exact path="/privacy" component={Privacy} />
+            <Route exact path="/keyDisclosure" component={KeyDisclosure} />
+            <ProtectedRoute
+              exact
+              path="/login-dashboard/:id"
+              component={LoginDashboard}
+            ></ProtectedRoute>
+            <Route
+              exact
+              path="/paymentpage/:id"
+              component={Paymentpage}
+            ></Route>
+            <Route
+              exact
+              path="/dashboardHome"
+              component={DashboardHome}
+            ></Route>
+            <Route
+              exact
+              path="/thank-you"
+              component={DashboardRegister}
+            ></Route>
+            <Route exact path="/paymentstep" component={Paymentstep}></Route>
+            <Route exact path="/singupForm" component={SingupForm}></Route>
+            <Route
+              exact
+              path="/singupForm/:token"
+              component={SingupForm}
+            ></Route>
+            <Route
+              exact
+              path="/invest-details/:invest_id"
+              component={InvestDetails}
+            ></Route>
+            <Route
+              exact
+              path="/propertdoc"
+              component={PropertyDocument}
+            ></Route>
+            <Route exact path="/forgetpassword" component={ForgetPassword} />
+            <Route
+              exact
+              path="/userresetpassword/:token"
+              component={conformpassword}
+            />
+            {localStorage.getItem("landdepot-login") ? (
+              <Route exact path="/login" component={Home}></Route>
+            ) : (
+              <Route exact path="/login" component={LoginForm}></Route>
+            )}
+          </Switch>
+        </div>
+        <Footer />
+      </ScrollToTop>
+    </HashRouter>
   );
 }
 
