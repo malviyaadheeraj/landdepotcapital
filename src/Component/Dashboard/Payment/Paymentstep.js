@@ -8,6 +8,7 @@ const Paymentstep = () => {
   const [amount, setAmount] = useState();
   const [message, setMessage] = useState();
   const [shareAlloted, setShareAlloted] = useState();
+  const [check, setCheck] = useState();
   const propertyDetails = JSON.parse(
     localStorage.getItem("landdepot-properties")
   );
@@ -52,7 +53,10 @@ const Paymentstep = () => {
 
     localStorage.setItem("landdepot_share", shareAlloted);
     localStorage.setItem("landdepot_amount", amount);
+    localStorage.setItem("landdepot_check", check);
   };
+
+  console.log(check);
 
   return (
     <>
@@ -145,6 +149,33 @@ const Paymentstep = () => {
                     </div>
                   </form>
 
+                  <div className="check-wrapper mt-4">
+                    {check === "1" ? (
+                      <input
+                        type="checkbox"
+                        value="0"
+                        name="check"
+                        className="me-2"
+                        onChange={(e) => setCheck(e.target.value)}
+                      />
+                    ) : (
+                      <input
+                        type="checkbox"
+                        value="1"
+                        name="check"
+                        className="me-2"
+                        onChange={(e) => setCheck(e.target.value)}
+                      />
+                    )}
+                    Do you want to redeem your credits?
+                    <p style={{ marginTop: "5px" }}>
+                      By checking this box we can redeem $10 credit which you
+                      have collected in your account.{" "}
+                      <Link style={{ color: "#0075be" }} to="/promotion">
+                        Know here
+                      </Link>
+                    </p>
+                  </div>
                   <div className="check-wrapper mt-4">
                     <p>
                       <input type="checkbox" className="me-2" />

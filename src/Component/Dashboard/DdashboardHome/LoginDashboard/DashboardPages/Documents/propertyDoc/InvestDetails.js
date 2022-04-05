@@ -145,9 +145,15 @@ const Propertydetails = ({ match }) => {
                     <div className="propertyDetails-text">
                       <h6>Total:</h6>
                       <span>
-                        {singleInvestList &&
+                        {parseInt(singleInvestList && singleInvestList.share) *
+                          parseInt(
+                            singleInvestList &&
+                              singleInvestList.property[0] &&
+                              singleInvestList.property[0].per_share_price
+                          )}
+                        {/* {singleInvestList &&
                           singleInvestList.property[0] &&
-                          singleInvestList.property[0].total_price}
+                          singleInvestList.property[0].total_price} */}
                       </span>
                     </div>
                   </div>

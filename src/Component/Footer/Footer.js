@@ -43,7 +43,12 @@ const Footer = () => {
               <ul>
                 <li>
                   <Link to="/blogs" id="Blog-page" className="linkcolor">
-                    Blogs{" "}
+                    Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/promotion" id="Blog-page" className="linkcolor">
+                    Promotion
                   </Link>
                 </li>
                 <li>

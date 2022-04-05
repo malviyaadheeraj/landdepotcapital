@@ -34,6 +34,7 @@ import conformpassword from "./Component/Dashboard/Forms/Confirmpassword";
 import ProtectedRoute from "./ProtectedRoute";
 import PropertyDocument from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/PropertyDocument";
 import InvestDetails from "./Component/Dashboard/DdashboardHome/LoginDashboard/DashboardPages/Documents/propertyDoc/InvestDetails";
+import Promotion from "./Component/Pages/Promotion";
 import { HashRouter } from "react-router-dom";
 import ScrollToTop from "react-router-scroll-top";
 
@@ -69,6 +70,7 @@ function App() {
             />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/terms" component={Terms} />
+            <Route exact path="/promotion" component={Promotion} />
             <Route exact path="/privacy" component={Privacy} />
             <Route exact path="/keyDisclosure" component={KeyDisclosure} />
             <ProtectedRoute

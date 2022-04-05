@@ -111,7 +111,7 @@ const MyInvesstment = ({ setCurrentTab }) => {
                     getUserProfileDetails.creadit_points}
                 </b>
                 <br />
-                <label>Cradit Points</label>
+                <label>Credit Points</label>
               </p>
             </li>
           </ul>
