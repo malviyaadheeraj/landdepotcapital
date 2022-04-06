@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 import "./DashbordHome.css";
 
 const DashboardHome = () => {
+  const handleRemove = () => {
+    localStorage.removeItem("landdepot-properties");
+    localStorage.removeItem("landdepot_amount");
+    localStorage.removeItem("landdepot_coupon");
+    localStorage.removeItem("landdepot_share");
+    localStorage.removeItem("landdepot_check");
+    localStorage.removeItem("landdepot_total");
+  };
+
   return (
     <>
       <Helmet>
@@ -20,10 +29,7 @@ const DashboardHome = () => {
             accumsan lacus vel facilisis.
           </p>
 
-          <Link
-            to="/login-dashboard/my-investment"
-            onClick={() => localStorage.removeItem("landdepot-properties")}
-          >
+          <Link to="/login-dashboard/my-investment" onClick={handleRemove}>
             <button className="complete-btn">COMPLETE</button>
           </Link>
         </div>

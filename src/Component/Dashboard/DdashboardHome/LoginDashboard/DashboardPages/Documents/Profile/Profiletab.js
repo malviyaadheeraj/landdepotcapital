@@ -235,7 +235,7 @@ const Profiletab = () => {
     ) {
       history.push("/paymentstep");
     } else {
-      setMessage("please fill all the fields");
+      setMessage("Please fill all the fields");
     }
   };
 

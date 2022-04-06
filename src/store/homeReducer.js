@@ -36,6 +36,8 @@ import {
   SET_COUNTRIES,
   SET_OLD_PROPERTY,
   SET_REFERAL,
+  SET_PROMOTION,
+  SET_COUPON_DATA,
 } from "./types";
 
 const initalState = {};
@@ -226,6 +228,16 @@ const homeReducer = (state = initalState, action) => {
       return {
         ...state,
         getReferalUsers: action.payload,
+      };
+    case SET_PROMOTION:
+      return {
+        ...state,
+        getPromotionData: action.payload,
+      };
+    case SET_COUPON_DATA:
+      return {
+        ...state,
+        getCouponData: action.payload,
       };
     default:
       return state;

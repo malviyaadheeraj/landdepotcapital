@@ -36,6 +36,8 @@ import {
   SET_COUNTRIES,
   SET_OLD_PROPERTY,
   SET_REFERAL,
+  SET_PROMOTION,
+  SET_COUPON_DATA,
 } from "./types";
 
 const config = {
@@ -441,3 +443,25 @@ export const getMyReferal = (data) => (dispatch) => {
     });
   });
 };
+
+// PROMOTION
+export const getPromotion = (data) => (dispatch) => {
+  Axios.get("/promotion").then((res) => {
+    dispatch({
+      type: SET_PROMOTION,
+      payload: res.data.data,
+    });
+  });
+};
+
+// COUPON APPLY
+export const onCouponApply = (data) => (dispatch) => {
+  Axios.post("coupon-apply", data).then((res) => {
+    dispatch({
+      type: SET_COUPON_DATA,
+      payload: res.data,
+    });
+  });
+};
+
+// http://capital.landdepotcapital.ca/landdepotcms/api/coupon-apply

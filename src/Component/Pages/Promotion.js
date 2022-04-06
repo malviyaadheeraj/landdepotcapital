@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { onTermData } from "../../store/homeAction";
 import Helmet from "react-helmet";
+import { getPromotion } from "../../store/homeAction";
 
 const Promotion = () => {
   const dispatch = useDispatch();
-  const getTermList = useSelector((state) => state.home.getTermList);
+  const getPromotionData = useSelector((state) => state.home.getPromotionData);
 
   useEffect(() => {
-    dispatch(onTermData());
+    dispatch(getPromotion());
   }, [dispatch]);
 
   return (
@@ -18,7 +18,7 @@ const Promotion = () => {
       </Helmet>
       <div
         dangerouslySetInnerHTML={{
-          __html: getTermList && getTermList.section_1,
+          __html: getPromotionData && getPromotionData.section_1,
         }}
       ></div>
     </>

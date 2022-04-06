@@ -22,11 +22,12 @@ const Paymentpage = ({ match }) => {
   const investmentShare = localStorage.getItem("landdepot_share");
   const investmentAmout = localStorage.getItem("landdepot_amount");
   const investmentCheck = localStorage.getItem("landdepot_check");
+  const investmentCoupon = localStorage.getItem("landdepot_coupon");
 
   const investNowProperty = () => {
     const data = {
       property_id: propertyDetails && propertyDetails.id,
-      share: investmentShare,
+      share: parseInt(investmentShare) + parseInt(investmentCoupon),
       payment_type: tabFirst,
       is_checkbox: investmentCheck,
     };

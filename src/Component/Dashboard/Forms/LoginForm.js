@@ -24,7 +24,7 @@ const LoginForm = () => {
     setErrors({ ...errors, [e.target.name]: false });
   };
 
-  setInterval(() => {
+  setTimeout(() => {
     if (getLogin && getLogin.status === false) {
       setMessage(getLogin && getLogin.message);
       window.location.reload();
@@ -32,7 +32,7 @@ const LoginForm = () => {
       setMessage(getResetPassword && getResetPassword.message);
       window.location.reload();
     }
-  }, 1000);
+  }, 2000);
 
   const onDataSubmit = (e) => {
     e.preventDefault();

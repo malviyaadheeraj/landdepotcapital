@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+import { onCouponApply } from "../../../store/homeAction";
 import "./Paymentstep.css";
 
 const Paymentstep = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
   const [amount, setAmount] = useState();
   const [message, setMessage] = useState();
+  const [couponCode, setCouponCode] = useState();
   const [shareAlloted, setShareAlloted] = useState();
   const [check, setCheck] = useState();
+  const [terms, setTerms] = useState(false);
   const propertyDetails = JSON.parse(
     localStorage.getItem("landdepot-properties")
   );
+  const getCouponData = useSelector((state) => state.home.getCouponData);
 
   const isFloat = (n) => {
     return Number(n) === n && n % 1 !== 0;
@@ -24,6 +30,7 @@ const Paymentstep = () => {
       `${e.target.value}` /
       `${propertyDetails && propertyDetails.per_share_price}`;
     setShareAlloted(shareAllotedAmount);
+    setMessage();
   };
 
   const remainingAmount = localStorage.getItem("landdepot_total");
@@ -42,6 +49,9 @@ const Paymentstep = () => {
       setMessage(
         `min amount is ${propertyDetails && propertyDetails.mini_invest_amount}`
       );
+    } else if (terms === false) {
+      setMessage("Please accept terms & conditions");
+      return false;
     } else if (
       parseInt(propertyDetails && propertyDetails.mini_invest_amount) <
         parseInt(amount) ||
@@ -54,9 +64,19 @@ const Paymentstep = () => {
     localStorage.setItem("landdepot_share", shareAlloted);
     localStorage.setItem("landdepot_amount", amount);
     localStorage.setItem("landdepot_check", check);
+    localStorage.setItem(
+      "landdepot_coupon",
+      getCouponData && getCouponData.amount
+    );
   };
 
-  console.log(check);
+  const handleCodeApply = () => {
+    const data = {
+      coupon_code: couponCode,
+    };
+
+    dispatch(onCouponApply(data));
+  };
 
   return (
     <>
@@ -105,7 +125,7 @@ const Paymentstep = () => {
                     </span>
                     )
                   </p>
-                  <form className="form-wrapper">
+                  <div className="form-wrapper">
                     <input
                       type="number"
                       className="invest-input"
@@ -144,10 +164,23 @@ const Paymentstep = () => {
                         type="txt"
                         className="apply-input"
                         placeholder="Enter Your Promo Code"
+                        value={couponCode}
+                        onChange={(e) => setCouponCode(e.target.value)}
                       />
-                      <button className="apply-btn">Apply</button>
+                      {getCouponData && getCouponData.status ? (
+                        <button className="apply-btn">Applied</button>
+                      ) : (
+                        <button className="apply-btn" onClick={handleCodeApply}>
+                          Apply
+                        </button>
+                      )}
                     </div>
-                  </form>
+                    {getCouponData && getCouponData.status ? null : (
+                      <h6 className="mt-2 text-danger">
+                        {getCouponData && getCouponData.message}
+                      </h6>
+                    )}
+                  </div>
 
                   <div className="check-wrapper mt-4">
                     {check === "1" ? (
@@ -178,8 +211,19 @@ const Paymentstep = () => {
                   </div>
                   <div className="check-wrapper mt-4">
                     <p>
-                      <input type="checkbox" className="me-2" />
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      <input
+                        id="terms"
+                        type="checkbox"
+                        onClick={() => {
+                          setTerms(!terms);
+                          setMessage();
+                        }}
+                        checked={terms}
+                        className="me-2"
+                      />
+                      <label htmlFor="terms" className="four-title mx-1 my-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      </label>
                     </p>
                   </div>
                 </div>

@@ -128,8 +128,8 @@ const MyInvesstment = ({ setCurrentTab }) => {
               </tr>
             </thead>
             <tbody>
-              {currentInvestList &&
-                currentInvestList.map((investList, key) => (
+              {getInvestmentList &&
+                getInvestmentList.map((investList, key) => (
                   <tr className="tabel-row" key={key}>
                     <th className="tablebody">
                       <p>
@@ -193,25 +193,21 @@ const MyInvesstment = ({ setCurrentTab }) => {
             </tbody>
           </table>
         </div>
-        <div className="row d-flex align-items-center justify-content-center mt-5">
+        {/* <div className="row d-flex align-items-center justify-content-center mt-5">
           <div className="col d-flex align-items-center justify-content-center">
             <ul className=" mb-4">
-              {pageNumbers.length > 10 && (
-                <>
-                  {pageNumbers.map((number) => (
-                    <button
-                      key={number}
-                      onClick={() => paginate(number)}
-                      className="prevButton"
-                    >
-                      {number}
-                    </button>
-                  ))}
-                </>
-              )}
+              {pageNumbers.map((number) => (
+                <button
+                  key={number}
+                  onClick={() => paginate(number)}
+                  className="prevButton"
+                >
+                  {number}
+                </button>
+              ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
