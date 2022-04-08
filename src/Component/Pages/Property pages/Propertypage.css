@@ -48,6 +48,20 @@
   font-weight: 600;
 }
 
+.propertypurchase-box{
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+.propertypurchase-wraps{
+  padding: 0;
+  margin: 0;
+}
+.propertyPrice-amounts{
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 20px;
+}
 .propty-invastmentwper {
   margin-left: 9px;
   padding-right: 60px;

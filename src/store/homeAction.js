@@ -68,7 +68,6 @@ export const onRegister = (data, history) => (dispatch) => {
     if (res.data.status === true) {
       localStorage.setItem("user-landdepot", JSON.stringify(res.data));
       history.push("/thank-you");
-      window.location.reload();
     }
     dispatch({
       type: SET_REGISTER,

@@ -122,39 +122,38 @@ const PropertyPage = ({ match }) => {
                           )}
                       </p>
 
-                      <div className="PriceWrapper">
-                        <div className="purchase-box">
-                          <p className="purchase-wraps">Purchase Price</p>
-                          <label className="Price-amounts">
-                            {getPropertiesId &&
-                              getPropertiesId.property &&
-                              getPropertiesId.property.purcahse_price}
-                          </label>
-                        </div>
-                        <div className="purchase-box">
-                          <p className="purchase-wraps">Project Term</p>
-                          <label className="Price-amounts">
-                            {getPropertiesId &&
-                              getPropertiesId.property &&
-                              getPropertiesId.property.property_term}
-                          </label>
-                        </div>
-                        <div className="purchase-box">
-                          <p className="purchase-wraps">
-                            Projected
-                            <br />
-                            Annual ROI
-                          </p>
-                          <label className="Price-amounts">
-                            {getPropertiesId &&
-                              getPropertiesId.property &&
-                              getPropertiesId.property.annual_rol}
-                            %
-                          </label>
-                        </div>
+                      <div className="propertypurchase-box">
+                        <p className="propertypurchase-wraps">
+                          Purchase Price -
+                        </p>
+                        <span className="propertyPrice-amounts">
+                          {getPropertiesId &&
+                            getPropertiesId.property &&
+                            getPropertiesId.property.purcahse_price}
+                        </span>
+                      </div>
+                      <div className="propertypurchase-box">
+                        <p className="propertypurchase-wraps">Project Term -</p>
+                        <span className="propertyPrice-amounts">
+                          {getPropertiesId &&
+                            getPropertiesId.property &&
+                            getPropertiesId.property.property_term}
+                        </span>
+                      </div>
+                      <div className="propertypurchase-box">
+                        <p className="propertypurchase-wraps">
+                          Projected Annual ROI -
+                        </p>
+                        <span className="propertyPrice-amounts">
+                          {(getPropertiesId &&
+                            getPropertiesId.property &&
+                            getPropertiesId.property.annual_rol) ||
+                            0}
+                          %
+                        </span>
                       </div>
                     </div>
-                    <div className="my-5 investbook-btns">
+                    <div className="my-4 investbook-btns">
                       {loginHidden === "true" ? (
                         <Link
                           to="/login-dashboard/my-profile"

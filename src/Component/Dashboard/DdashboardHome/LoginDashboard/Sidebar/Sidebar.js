@@ -10,7 +10,8 @@ const Sidebar = ({ setCurrentTab, currentTab }) => {
 
   const handleLogout = () => {
     dispatch(onLogoutUser(history));
-    localStorage.clear();
+    localStorage.removeItem("landdepot-token");
+    localStorage.removeItem("landdepot-login");
     window.location.reload();
   };
 

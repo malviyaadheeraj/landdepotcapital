@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
@@ -17,24 +17,54 @@ const SingupForm = ({ match }) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState();
+  const [showEye, setShowEye] = useState("password");
+  const [open, setOpen] = useState(false);
+  const [showEyeConfirm, setShowEyeConfirm] = useState("password");
+  const [openConfirmPassword, setOpenConfirmPassword] = useState(false);
+  const [emailMessage, setEmailMessage] = useState();
   const getRegister = useSelector((state) => state.home.getRegister);
+
+  useEffect(() => {
+    if (getRegister && getRegister.status === false) {
+      setEmailMessage("Your given email id has been already registered.! ");
+    }
+  }, [getRegister]);
 
   const onInputChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: false });
+    setMessage();
+    setEmailMessage();
+    setOpen(false);
+    setOpenConfirmPassword(false);
+  };
+  const onPasswordChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: false });
+    setMessage();
+    setEmailMessage();
+    setOpen(true);
+  };
+  const onConfirmPasswordChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: false });
+    setMessage();
+    setEmailMessage();
+    setOpenConfirmPassword(true);
   };
 
-  setTimeout(() => {
-    if (getRegister && getRegister.status === false) {
-      setMessage("Your given email id has been already registered.!");
-      window.location.reload();
-    } else {
-      setMessage("");
-    }
-  }, 500);
+  // setTimeout(() => {
+  //   if (getRegister && getRegister.status === false) {
+  //     setMessage("Your given email id has been already registered.!");
+  //     window.location.reload();
+  //   } else {
+  //     setMessage("");
+  //   }
+  // }, 500);
 
   const onDataSubmit = (e) => {
     e.preventDefault();
+    setMessage();
 
     let errorExist = false;
     let errorsObject = {};
@@ -87,8 +117,6 @@ const SingupForm = ({ match }) => {
     }
     if (values.password !== values.confirm_password) {
       setMessage(`Password and Confirm Password does not matched..!`);
-    } else {
-      setMessage("");
     }
 
     const data = {
@@ -130,6 +158,11 @@ const SingupForm = ({ match }) => {
   const handleSocialLoginFailure = (err) => {
     console.error(err);
   };
+
+  const showPassword = () => setShowEye("password");
+  const hidePassword = () => setShowEye("text");
+  const showConfirmPassword = () => setShowEyeConfirm("password");
+  const hideConfirmPassword = () => setShowEyeConfirm("text");
 
   return (
     <>
@@ -199,34 +232,65 @@ const SingupForm = ({ match }) => {
                       {errors.email && "Please enter your email address"}
                     </span>
                   </div>
-                  <div style={{ height: "81px" }}>
+                  <div style={{ height: "81px", position: "relative" }}>
                     <input
-                      type="password"
+                      type={showEye === "text" ? "text" : "password"}
                       className="pwd-input"
                       placeholder="Password"
                       name="password"
                       value={values.password}
-                      onChange={onInputChange}
+                      onChange={onPasswordChange}
                     />
                     <span className="signup-error">
                       {errors.password && "Please enter your password"}
                     </span>
+                    {open && (
+                      <div>
+                        {showEye === "text" ? (
+                          <i
+                            className="fa-solid fa-eye text-secondary"
+                            onClick={showPassword}
+                          ></i>
+                        ) : (
+                          <i
+                            class="fas fa-eye-slash text-secondary"
+                            onClick={hidePassword}
+                          ></i>
+                        )}
+                      </div>
+                    )}
                   </div>
-                  <div style={{ height: "81px" }}>
+                  <div style={{ height: "81px", position: "relative" }}>
                     <input
-                      type="password"
+                      type={showEyeConfirm === "text" ? "text" : "password"}
                       className="pwd-input"
                       placeholder="Confirm Password"
                       name="confirm_password"
                       value={values.confirm_password}
-                      onChange={onInputChange}
+                      onChange={onConfirmPasswordChange}
                     />
                     <span className="signup-error">
                       {errors.confirm_password &&
                         "Please enter your Confirm Password"}
                     </span>
+                    {openConfirmPassword && (
+                      <div>
+                        {showEyeConfirm === "text" ? (
+                          <i
+                            className="fa-solid fa-eye text-secondary"
+                            onClick={showConfirmPassword}
+                          ></i>
+                        ) : (
+                          <i
+                            class="fas fa-eye-slash text-secondary"
+                            onClick={hideConfirmPassword}
+                          ></i>
+                        )}
+                      </div>
+                    )}
                   </div>
                   <div className="text-danger">{message}</div>
+                  <div className="text-danger">{emailMessage}</div>
                   <button type="submit" className="singup-btn">
                     Sign up
                   </button>

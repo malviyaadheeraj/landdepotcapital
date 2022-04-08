@@ -165,7 +165,10 @@ const Paymentstep = () => {
                         className="apply-input"
                         placeholder="Enter Your Promo Code"
                         value={couponCode}
-                        onChange={(e) => setCouponCode(e.target.value)}
+                        onChange={(e) => {
+                          setCouponCode(e.target.value);
+                          setMessage();
+                        }}
                       />
                       {getCouponData && getCouponData.status ? (
                         <button className="apply-btn">Applied</button>
@@ -189,7 +192,10 @@ const Paymentstep = () => {
                         value="0"
                         name="check"
                         className="me-2"
-                        onChange={(e) => setCheck(e.target.value)}
+                        onChange={(e) => {
+                          setCheck(e.target.value);
+                          setMessage();
+                        }}
                       />
                     ) : (
                       <input
@@ -197,7 +203,10 @@ const Paymentstep = () => {
                         value="1"
                         name="check"
                         className="me-2"
-                        onChange={(e) => setCheck(e.target.value)}
+                        onChange={(e) => {
+                          setCheck(e.target.value);
+                          setMessage();
+                        }}
                       />
                     )}
                     Do you want to redeem your credits?
@@ -222,7 +231,10 @@ const Paymentstep = () => {
                         className="me-2"
                       />
                       <label htmlFor="terms" className="four-title mx-1 my-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        Agree to{" "}
+                        <Link to="/terms" style={{ color: "#0075be" }}>
+                          Terms and Conditions
+                        </Link>
                       </label>
                     </p>
                   </div>

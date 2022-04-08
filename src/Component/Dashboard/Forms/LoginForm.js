@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { auth, googleProvider } from "../../../firebase";
@@ -13,29 +13,46 @@ import SocialButton from "./SocialButton ";
 const LoginForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState({
+    email: localStorage.getItem("ldc_email"),
+    password: localStorage.getItem("ldc_password"),
+  });
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState();
+  const [showEye, setShowEye] = useState("password");
+  const [open, setOpen] = useState(false);
   const getLogin = useSelector((state) => state.home.getLogin);
   const getResetPassword = useSelector((state) => state.home.getResetPassword);
+
+  useEffect(() => {
+    if (getLogin && getLogin.status === false) {
+      setMessage(getLogin && getLogin.message);
+    } else if (getResetPassword && getResetPassword.status === true) {
+      setMessage(getResetPassword && getResetPassword.message);
+    }
+  }, [getLogin]);
 
   const onInputChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: false });
+    setMessage();
+    setOpen(false);
   };
 
-  setTimeout(() => {
-    if (getLogin && getLogin.status === false) {
-      setMessage(getLogin && getLogin.message);
-      window.location.reload();
-    } else if (getResetPassword && getResetPassword.status === true) {
-      setMessage(getResetPassword && getResetPassword.message);
-      window.location.reload();
-    }
-  }, 2000);
+  const onPasswordChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: false });
+    setMessage();
+    setOpen(true);
+  };
+  const onRememberChange = () => {
+    localStorage.setItem("ldc_email", values.email);
+    localStorage.setItem("ldc_password", values.password);
+  };
 
   const onDataSubmit = (e) => {
     e.preventDefault();
+    setMessage();
 
     let errorExist = false;
     let errorsObject = {};
@@ -100,6 +117,9 @@ const LoginForm = () => {
     console.error(err);
   };
 
+  const showPassword = () => setShowEye("password");
+  const hidePassword = () => setShowEye("text");
+
   return (
     <>
       <div className="container-fluid formsbg">
@@ -136,22 +156,45 @@ const LoginForm = () => {
                     </span>
                   </div>
 
-                  <div className="input_field mb-2" style={{ height: "75px" }}>
+                  <div
+                    className="input_field mb-2"
+                    style={{ height: "75px", position: "relative" }}
+                  >
                     <input
-                      type="password"
+                      type={showEye === "text" ? "text" : "password"}
                       className="pwd-input"
                       placeholder="Password"
                       name="password"
                       value={values.password}
-                      onChange={onInputChange}
+                      onChange={onPasswordChange}
                     />
                     <span className="signup-error">
                       {errors.password && "Please enter your password"}
                     </span>
+
+                    {open && (
+                      <div>
+                        {showEye === "text" ? (
+                          <i
+                            className="fa-solid fa-eye text-secondary"
+                            onClick={showPassword}
+                          ></i>
+                        ) : (
+                          <i
+                            class="fas fa-eye-slash text-secondary"
+                            onClick={hidePassword}
+                          ></i>
+                        )}
+                      </div>
+                    )}
                   </div>
                   <div className="remamber-wrap">
                     <p className="remambertxt">
-                      <input type="checkbox" className="me-2" />
+                      <input
+                        type="checkbox"
+                        className="me-2"
+                        onChange={(e) => onRememberChange(e)}
+                      />
                       Remember Password
                     </p>
                     <Link to="forgetpassword" className="forgetpwd-wrap">
