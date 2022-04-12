@@ -62,11 +62,15 @@ const Properties = () => {
                         alt=""
                       />
                       <div className="card-upper-text">
-                        {properties.tags.split(",").map((item) => (
-                          <label className="just-text text-capitalize">
-                            {item}
-                          </label>
-                        ))}
+                        {properties &&
+                          properties.tags.split(",").map((item, key) => (
+                            <label
+                              className="just-text text-capitalize"
+                              key={key}
+                            >
+                              {item}
+                            </label>
+                          ))}
                         <div className="address-text">
                           <Link
                             to={`/property/${properties.slug}`}

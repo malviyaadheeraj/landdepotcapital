@@ -30,7 +30,7 @@ const LoginForm = () => {
     } else if (getResetPassword && getResetPassword.status === true) {
       setMessage(getResetPassword && getResetPassword.message);
     }
-  }, [getLogin]);
+  }, [getLogin, getResetPassword]);
 
   const onInputChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });

@@ -127,6 +127,7 @@ const PropertyPage = ({ match }) => {
                           Purchase Price -
                         </p>
                         <span className="propertyPrice-amounts">
+                          $
                           {getPropertiesId &&
                             getPropertiesId.property &&
                             getPropertiesId.property.purcahse_price}
@@ -137,7 +138,8 @@ const PropertyPage = ({ match }) => {
                         <span className="propertyPrice-amounts">
                           {getPropertiesId &&
                             getPropertiesId.property &&
-                            getPropertiesId.property.property_term}
+                            getPropertiesId.property.property_term}{" "}
+                          Years
                         </span>
                       </div>
                       <div className="propertypurchase-box">
