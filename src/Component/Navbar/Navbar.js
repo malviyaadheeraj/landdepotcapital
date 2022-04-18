@@ -30,34 +30,52 @@ const Navbar = () => {
             )}
           </div>
           <ul className="navbarItems">
-            <li className="navbarItem">
+            <li
+              className="navbarItem"
+              onClick={() => localStorage.removeItem("landdepot-properties")}
+            >
               <Link className="navitems-size" to="/">
                 Home
               </Link>
             </li>
-            <li className="navbarItem">
+            <li
+              className="navbarItem"
+              onClick={() => localStorage.removeItem("landdepot-properties")}
+            >
               <Link className="navitems-size" to="/properties">
                 Properties
               </Link>
             </li>
-            <li className="navbarItem">
+            <li
+              className="navbarItem"
+              onClick={() => localStorage.removeItem("landdepot-properties")}
+            >
               <Link className="navitems-size" to="/about">
                 About
               </Link>
             </li>
-            <li className="navbarItem">
+            <li
+              className="navbarItem"
+              onClick={() => localStorage.removeItem("landdepot-properties")}
+            >
               <Link className="navitems-size" to="/blogs">
                 Blogs
               </Link>
             </li>
-            <li className="navbarItem">
+            <li
+              className="navbarItem"
+              onClick={() => localStorage.removeItem("landdepot-properties")}
+            >
               <Link className="navitems-size" to="/contact">
                 Contact Us
               </Link>
             </li>
 
             {loginHidden === "true" ? (
-              <li className="navbarItem">
+              <li
+                className="navbarItem"
+                onClick={() => localStorage.removeItem("landdepot-properties")}
+              >
                 <Link
                   className="navitems-size"
                   to="/login-dashboard/my-investment"
@@ -71,7 +89,10 @@ const Navbar = () => {
                 </Link>
               </li>
             ) : (
-              <li className="navbarItem">
+              <li
+                className="navbarItem"
+                onClick={() => localStorage.removeItem("landdepot-properties")}
+              >
                 <Link className="navitems-size login-btn" to="/login">
                   <i className="fa-solid fa-user me-2"></i>Login
                 </Link>

@@ -98,7 +98,7 @@ export const getOldPropertyList = (data) => (dispatch) => {
 
 // GET PROPERTY LIST ID
 export const getPropertyListId = (data) => (dispatch) => {
-  Axios.get(`singleProperty?property_id=${data.id}`).then((res) => {
+  Axios.get(`/singleProperty?property_id=${data.id}`).then((res) => {
     dispatch({
       type: SET_PROPERTY_LIST_ID,
       payload: res.data,
@@ -455,12 +455,10 @@ export const getPromotion = (data) => (dispatch) => {
 
 // COUPON APPLY
 export const onCouponApply = (data) => (dispatch) => {
-  Axios.post("coupon-apply", data).then((res) => {
+  Axios.post("/coupon-apply", data).then((res) => {
     dispatch({
       type: SET_COUPON_DATA,
       payload: res.data,
     });
   });
 };
-
-// http://capital.landdepotcapital.ca/landdepotcms/api/coupon-apply
