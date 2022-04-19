@@ -4,150 +4,119 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/properties</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/property/:property_id</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/previous-deals</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/invest-property</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/about</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/blogs</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/blog/:blog_id</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/contact</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/ourstory</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/team</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/advisors</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/careers</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/events</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/event-details/:event_id</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/faq</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/terms</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/privacy</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/keyDisclosure</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login-dashboard/my-investment</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login-dashboard/my-documents</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login-dashboard/my-profile</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login-dashboard/growth</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login-dashboard/referal</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/paymentpage/interac</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/paymentpage/wire-transfer</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/dashboardHome</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/thank-you</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/paymentstep</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/singupForm</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/singupForm/:token</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/invest-details/:invest_id</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/propertdoc</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/forgetpassword</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/userresetpassword/:token</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
-              <url>
-                <loc>http://capital.landdepotcapital.ca/#/login</loc>
-                <lastmod>2022-04-01T10:48:06+00:00</lastmod>
-              </url>
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://capital.landdepotcapital.ca/login/</loc>
+  <lastmod>2022-04-19T05:44:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/</loc>
+  <lastmod>2022-04-19T05:44:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/properties/</loc>
+  <lastmod>2022-04-19T05:44:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/about/</loc>
+  <lastmod>2022-04-19T05:44:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/blogs/</loc>
+  <lastmod>2022-04-19T05:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/contact/</loc>
+  <lastmod>2022-04-19T05:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/forgetpassword/</loc>
+  <lastmod>2022-04-19T05:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/singupForm/</loc>
+  <lastmod>2022-04-19T05:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/OurStory/</loc>
+  <lastmod>2022-04-19T05:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/team/</loc>
+  <lastmod>2022-04-19T05:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/advisors/</loc>
+  <lastmod>2022-04-19T05:44:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/careers/</loc>
+  <lastmod>2022-04-19T05:44:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/promotion/</loc>
+  <lastmod>2022-04-19T05:44:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/events/</loc>
+  <lastmod>2022-04-19T05:44:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/faq/</loc>
+  <lastmod>2022-04-19T05:44:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/terms/</loc>
+  <lastmod>2022-04-19T05:44:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/privacy/</loc>
+  <lastmod>2022-04-19T05:44:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/keyDisclosure/</loc>
+  <lastmod>2022-04-19T05:44:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/login-dashboard/my-investment/</loc>
+  <lastmod>2022-04-19T05:44:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/blog/toronto-population-growth-going-down-and-real-estate-rising-up0fw7koq8kf/</loc>
+  <lastmod>2022-04-19T05:44:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/blog/millennials-big-changes-need-to-happen-in-the-financial-market-nowzhop19ztfw/</loc>
+  <lastmod>2022-04-19T05:44:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://capital.landdepotcapital.ca/blog/test/</loc>
+  <lastmod>2022-04-19T05:44:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 
 </urlset>
