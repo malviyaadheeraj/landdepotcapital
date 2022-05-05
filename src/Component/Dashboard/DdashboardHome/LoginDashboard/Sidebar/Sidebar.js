@@ -12,6 +12,12 @@ const Sidebar = ({ setCurrentTab, currentTab }) => {
     dispatch(onLogoutUser(history));
     localStorage.removeItem("landdepot-token");
     localStorage.removeItem("landdepot-login");
+    localStorage.removeItem("landdepot-properties");
+    localStorage.removeItem("landdepot_amount");
+    localStorage.removeItem("landdepot_coupon");
+    localStorage.removeItem("landdepot_share");
+    localStorage.removeItem("landdepot_check");
+    localStorage.removeItem("landdepot_total");
     window.location.reload();
   };
 
