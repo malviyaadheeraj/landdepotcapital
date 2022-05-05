@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { updateInvestList } from "../../../store/homeAction";
+import Apaylo from "./Apaylo";
 import InteracTransfer from "./InteracTransfer";
 import WireTransfer from "./WireTransfer";
 
@@ -69,6 +70,18 @@ const Paymentpage = ({ match }) => {
               >
                 Wire Transfer
               </li>
+              <li
+                className={`payintertab ${
+                  currentTab === "apaylo" && "payintertab-active"
+                }`}
+                onClick={() => {
+                  setCurrentTab("apaylo");
+                  history.push("/Paymentpage/apaylo");
+                  setTabFirst(3);
+                }}
+              >
+                Apaylo
+              </li>
             </ul>
           </div>
           <br />
@@ -84,6 +97,7 @@ const Paymentpage = ({ match }) => {
               investmentAmout={investmentAmout}
             />
           )}
+          {currentTab === "apaylo" && <Apaylo />}
 
           <div className="paybtn-wrapper">
             <Link to="/paymentstep">
