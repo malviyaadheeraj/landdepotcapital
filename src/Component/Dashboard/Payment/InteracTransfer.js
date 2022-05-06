@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const InteracTransfer = ({ investmentAmout }) => {
+const InteracTransfer = ({ investmentAmout, investNowProperty }) => {
   return (
     <div className="interac-transfer">
       <div className="paymentDetailsWrapper">
@@ -30,6 +31,15 @@ const InteracTransfer = ({ investmentAmout }) => {
             Security Response <span className="float-end"></span>
           </li>
         </ul>
+      </div>
+      <div className="paybtn-wrapper">
+        <Link to="/paymentstep">
+          <button className="backbtn-wrap">Back</button>
+        </Link>
+
+        <button className="confirm-btn" onClick={investNowProperty}>
+          Confirm Transaction
+        </button>
       </div>
     </div>
   );

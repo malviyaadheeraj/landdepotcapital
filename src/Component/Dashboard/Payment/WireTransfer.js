@@ -1,6 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const WireTransfer = ({ propertyDetails, investmentAmout }) => {
+const WireTransfer = ({
+  propertyDetails,
+  investmentAmout,
+  investNowProperty,
+}) => {
   return (
     <div className="interac-transfer">
       <div className="paymentDetailsWrapper">
@@ -45,6 +50,15 @@ const WireTransfer = ({ propertyDetails, investmentAmout }) => {
             </span>
           </li>
         </ul>
+      </div>
+      <div className="paybtn-wrapper">
+        <Link to="/paymentstep">
+          <button className="backbtn-wrap">Back</button>
+        </Link>
+
+        <button className="confirm-btn" onClick={investNowProperty}>
+          Confirm Transaction
+        </button>
       </div>
     </div>
   );

@@ -1,20 +1,66 @@
 import React from "react";
-import utf8 from "utf8";
-import sha512 from "js-sha512";
-var Buffer = require("buffer/").Buffer;
+import { Link } from "react-router-dom";
 
-const Apaylo = () => {
-  const apiKey = "b7b3c8f06cc7fbfa679bcbfb92c51c63918f4cf8";
-  const secretKey = "kJGRhl4uRsVUTjgg/ftMnw==";
-  const time = new Date();
-  const formatTime = time.toISOString().split("T")[0];
-  var concatinatedValue = `${apiKey}${secretKey}${formatTime}`;
-  var bytes = utf8.encode(concatinatedValue);
-  const hashingBytes = Buffer.from(sha512(bytes), "hex");
-  const base64Value = Buffer.from(hashingBytes).toString("base64");
-  console.log(base64Value);
+const Apaylo = ({ onInputChange, confirmTransection }) => {
+  return (
+    <div className="apaylo-wrapper mt-3">
+      <form onSubmit={confirmTransection}>
+        <div className="col-md-6 mb-3 px-3">
+          <div className="input-group">
+            <input
+              type="text"
+              name="firstName"
+              className="form-control"
+              onChange={onInputChange}
+              placeholder="First name"
+            />
+          </div>
+        </div>
+        <div className="col-md-6 mb-3 px-3">
+          <div className="input-group">
+            <input
+              type="text"
+              name="lastName"
+              className="form-control"
+              onChange={onInputChange}
+              placeholder="Last name"
+            />
+          </div>
+        </div>
+        <div className="col-md-6 mb-3 px-3">
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              className="form-control"
+              onChange={onInputChange}
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div className="col-md-6 mb-3 px-3">
+          <div className="input-group">
+            <input
+              type="number"
+              name="accountNumber"
+              className="form-control"
+              onChange={onInputChange}
+              placeholder="Account Number"
+            />
+          </div>
+        </div>
+        <div className="paybtn-wrapper">
+          <Link to="/paymentstep">
+            <button className="backbtn-wrap">Back</button>
+          </Link>
 
-  return <div>Apaylo</div>;
+          <button type="submit" className="confirm-btn">
+            Confirm Transaction
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default Apaylo;
