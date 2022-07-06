@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: "http://capital.landdepotcapital.ca/landdepotcms/api",
+  baseURL: "http://ldc.eoxysitsolutionllp.com/landdepotcms/api",
 });
 
 export default Axios;

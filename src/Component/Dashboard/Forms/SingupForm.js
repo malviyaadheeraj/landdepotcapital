@@ -26,7 +26,7 @@ const SingupForm = ({ match }) => {
 
   useEffect(() => {
     if (getRegister && getRegister.status === false) {
-      setEmailMessage("Your given email id has been already registered.! ");
+      setEmailMessage(getRegister && getRegister.message);
     }
   }, [getRegister]);
 
@@ -115,9 +115,9 @@ const SingupForm = ({ match }) => {
       setErrors(errorsObject);
       return false;
     }
-    if (values.password !== values.confirm_password) {
-      setMessage(`Password and Confirm Password does not matched..!`);
-    }
+    // if (values.password !== values.confirm_password) {
+    //   setMessage(`Password and Confirm Password does not matched..!`);
+    // }
 
     const data = {
       first_name: values.first_name,
